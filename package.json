@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.6",
-    "@astrojs/netlify": "^latest-version"
+    "astro": "^4.16.6"
   }
 }
