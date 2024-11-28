@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: '| Transmission Lines'
+title: '| transmission lines'
 pubDate: 2023-11-13
 description: 'Notes on transmission lines'
 preview: "Lorem ipsum"
@@ -8,8 +8,6 @@ author: 'Sean'
 
 tags: ["notes"]
 ---
-Links: [[330 INDEX]]
-
 # Classification of Power Lines
 We can define power lines by the following *two* categories:
 - Overhead lines

@@ -23,7 +23,8 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
   <body class="animatein">
   
 <h1 class="fancy">| NOTES</h1>
-<p class="skinny"> check out some of my projects</p>
+<p class="skinny">notes on various topics</p>
+
 <hr class="divider">
 
 </section>
@@ -54,6 +55,7 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
 <style>
 
 .blogPostCont{
+  
   background-color: #ffffff;
   border-radius: 10px;
   padding: 1%;
@@ -171,7 +173,23 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
     width: 550px; /* Adjust the image width as needed */
     height: auto; /* Maintain the aspect ratio of the image */
 }
+.s4{
 
+  margin-top: 2%;
+  border-left: solid;
+  border-bottom: solid;
+  border-top: dashed;
+  border-color: #000000 ;
+  transform: translateX(3%);
+  background-color: #d6d6d600;
+  padding: 5%;
+  border-radius:  10px;
+  border-width: 2px;
+}
+.s4:hover{
+  transform: translateX(3%);
+  background-color: rgba(135, 151, 153, 0.274);
+}
 .s4 img:hover {
   box-shadow:  10px 10px 0px rgba(135, 151, 153, 0.993);
   

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: '| bob'
+title: '| chatbot'
 pubDate: 2023-11-13
 description: 'interactive discord bot built during student hackathon'
 preview: "Lorem ipsum"

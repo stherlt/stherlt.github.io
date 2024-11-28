@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: '| 312 Notes'
+title: '| embedded systems'
 pubDate: 2023-11-13
-description: 'interactive discord bot built during student hackathon'
+description: 'embedded systems notes'
 preview: "Lorem ipsum"
 author: 'Astro Learner'
 image:
