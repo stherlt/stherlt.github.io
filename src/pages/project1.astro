@@ -1,0 +1,215 @@
+
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import * as greatPost from '../projects/project1.md';
+const { frontmatter, Content } = greatPost;
+
+
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <title>| PROJECTS</title> <!Tab title>
+    <script defer src="/src/app/appscroll.js"></script>
+    <Navigation/>
+  </head>
+  <body class="animatein">
+  
+    <h1 class="fancy">{frontmatter.title}</h1>
+    <p class="skinny">{frontmatter.misc}</p>
+<hr class="divider">
+
+</section>
+<section>
+  <Content/>
+</section>
+
+
+
+
+
+<hr class="divider">
+  <Footer/>
+  </body>
+  
+</html>
+
+<style>
+
+
+.indexrighttext{
+  text-align: center;
+  
+  
+  transform: translateY(10px);
+  background-color: 	#e8dcaf;
+  border-width: 1.5px;
+  
+  width: 30%;
+  margin-right: auto;
+  margin-left: 0;
+  border-radius: 4px;
+  padding: 1%;
+  animation: wiggle 2.5s infinite ease-in-out;
+}
+@keyframes welcomepulse {
+  0% {
+    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Right */
+  }
+  25% {
+    box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.6); /* Bottom */
+  }
+  50% {
+    box-shadow: -10px 0px 15px rgba(255, 255, 255, 0.6); /* Left */
+  }
+  75% {
+    box-shadow: 0px -10px 15px rgba(255, 255, 255, 0.6); /* Top */
+  }
+  100% {
+    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Back to Right */
+  }
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  
+  100% { transform: rotate(0deg); }
+
+}
+
+.BACKGROUNDTEXT{
+  
+
+  position: absolute;
+  color: transparent;
+  color: rgb(0, 0, 0);
+  z-index: -1;
+  font-size: 300%;
+  padding-left: 60%;
+  transform: translateY(-250px);
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 780;
+  font-style: normal;
+}
+.BACKGROUNDTEXTABT{
+  
+
+  position: absolute;
+  color: transparent;
+  color: rgb(0, 0, 0);
+  z-index: -1;
+  font-size: 100%;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 780;
+  font-style: normal;
+}
+.LINKBOX {
+  font-family: "Lexend Deca", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-style: solid;
+  color:rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.034); /* Button background color */
+  border-color: #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease, border-style 0.3s ease-in; /* Smooth transition for hover effect */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26); /* Subtle shadow */
+}
+
+/* Glow effect on hover */
+.LINKBOX:hover {
+ 
+
+  border-style: dotted;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.377); /* Subtle shadow */
+  font-weight: 350;
+
+  background-color: rgba(135, 151, 153, 0);
+  transform: scale(1.05); /* Slight zoom-in effect */
+
+  
+}
+@keyframes welcomepulse {
+  0% {
+    
+    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Right */
+  }
+  25% {
+    box-shadow:inset 0px 10px 15px rgba(82, 82, 82, 0.6); /* Bottom */
+  }
+  50% {
+    box-shadow:inset -10px 0px 15px rgba(82, 82, 82, 0.6); /* Left */
+  }
+  75% {
+    box-shadow:inset 0px -10px 15px rgba(82, 82, 82, 0.6); /* Top */
+  }
+  100% {
+    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Back to Right */
+  }}
+  .s4 img {
+    margin-left: 10%;
+    
+    
+    transition: box-shadow 0.3s ease, border-radius 0.3s ease;
+    width: 550px; /* Adjust the image width as needed */
+    height: auto; /* Maintain the aspect ratio of the image */
+}
+.s4 img:hover {
+  box-shadow:  10px 10px 0px rgba(135, 151, 153, 0.993);
+  
+  border-radius: 10px; /* Optional: rounded corners for the image */
+}
+@media (max-width: 480px) {
+  .project {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+  }
+  .img{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26); /* Subtle shadow */
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-style:solid;
+    border-width: 2.5px;
+    border-radius: 10px;
+    border-color: #d6d6d6;
+    width: 100%; /* Adjusts image width to fit the container */
+    max-width: 300px; /* Limits image size on smaller screens */
+    height: auto; /* Maintains aspect ratio */
+    transform: translateX(-10%);
+   
+   
+  }
+}
+  @media (max-width: 480px) {
+  .fancy {
+    font-size: 2.2rem;
+  }
+  }
+</style>

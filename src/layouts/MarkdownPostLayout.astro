@@ -1,0 +1,42 @@
+---
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout pageTitle={frontmatter.title}>
+    <div class="blogtitle">
+        <div class = "blganim">{frontmatter.title}</div>
+    </div>
+<p class = "fadeblog"> written by {frontmatter.author}</p>
+<slot class="fadeblog"></slot>
+</BaseLayout>
+<style>
+    .blogtitle .blganim{
+        font-size: 30px;
+        
+    }
+
+    .blganim {
+    
+    animation: blganime 1s forwards;
+  }
+
+  .fadeblog {
+    opacity: 0;
+    animation: fadeinanim 1.1s ease forwards;
+  }
+  @keyframes blganime {
+    0% { left: 0.0em; opacity: 0; filter: blur(0); }
+    50% { left: -0.0em; opacity: 0.3;filter: blur(2px); }
+    100% { left: 0; opacity: 1;filter: blur(0); ; }
+  }
+
+  @keyframes fadeinanim {
+    0% { left: 0.0em; opacity: 0; filter: blur(0); }
+    50% { left: -0.0em; opacity: 0.3;filter: blur(2px); }
+    100% { left: 0; opacity: 1;filter: blur(0); ; }
+  }
+  
+  
+  
+</style>

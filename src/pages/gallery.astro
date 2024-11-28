@@ -1,0 +1,159 @@
+
+---
+import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+    <title>| GALLERY</title> <!Tab title>
+    <script defer src="/src/app/appscroll.js"></script>
+    <Navigation/>
+  </head>
+  <body class="animatein">
+  
+<h1 class="fancy">| GALLERY</h1>
+<p class="skinny"> THIS PAGE IS UNDER CONSTRUCTION...</p>
+<hr class="divider">
+
+</section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr class="divider">
+  <Footer/>
+  </body>
+  
+</html>
+
+<style>
+.LINKBOX {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: #dfdfdf8c; /* Button background color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Glow effect on hover */
+.LINKBOX:hover {
+  box-shadow:rgb(255, 255, 255);
+  backdrop-filter: invert(100%);
+  animation: welcomepulse 4.5s infinite ease-in-out; /* Blue glow shadow */
+  transform: scale(1.15); /* Slight zoom-in effect */
+  background-color: #ffffffc9;
+  
+}
+
+.indexrighttext{
+  text-align: center;
+  
+  
+  transform: translateY(10px);
+  background-color: 	#e8dcaf;
+  border-width: 1.5px;
+  
+  width: 30%;
+  margin-right: auto;
+  margin-left: 0;
+  border-radius: 4px;
+  padding: 1%;
+  animation: wiggle 2.5s infinite ease-in-out;
+}
+@keyframes welcomepulse {
+  0% {
+    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Right */
+  }
+  25% {
+    box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.6); /* Bottom */
+  }
+  50% {
+    box-shadow: -10px 0px 15px rgba(255, 255, 255, 0.6); /* Left */
+  }
+  75% {
+    box-shadow: 0px -10px 15px rgba(255, 255, 255, 0.6); /* Top */
+  }
+  100% {
+    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Back to Right */
+  }
+}
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  
+  100% { transform: rotate(0deg); }
+
+}
+
+.BACKGROUNDTEXT{
+  
+
+  position: absolute;
+  color: transparent;
+  color: rgb(0, 0, 0);
+  z-index: -1;
+  font-size: 300%;
+  padding-left: 60%;
+  transform: translateY(-250px);
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 780;
+  font-style: normal;
+}
+.BACKGROUNDTEXTABT{
+  
+
+  position: absolute;
+  color: transparent;
+  color: rgb(0, 0, 0);
+  z-index: -1;
+  font-size: 100%;
+
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 780;
+  font-style: normal;
+}
+@media (max-width: 480px) {
+  .fancy {
+    font-size: 2.2rem;
+  }
+  }
+</style>
