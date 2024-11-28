@@ -44,6 +44,7 @@ const { frontmatter } = Astro.props;
   <body class="animatein">
 <Navigation/>
 <p class="fancy">{frontmatter.title}</p>
+<p>{frontmatter.description}</p>
 <hr class="divider">
 
 </section>
@@ -64,21 +65,20 @@ const { frontmatter } = Astro.props;
 <style>
 .content-section {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.127); /* Subtle shadow */
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 3%;
+  padding-bottom: 3%;
   border-radius: 20px;
   background-color: #ffffff;
   margin: 0 auto; /* Center the section horizontally */
   padding-left: 15%; 
   padding-right: 15%; /* Optional: Add some padding inside the section */
   box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  max-width: 100%;
 }
 
-@media (min-width: 1024px) { /* Apply on screens 1024px or wider */
-  .content-section {
-    width: 100%; /* Take up 75% of the screen width */
-  }
-}
+
+
+
 .indexrighttext{
   text-align: center;
   
@@ -223,35 +223,37 @@ h1, h2, h3, h4, h5, h6 {
  
 }
 @media (max-width: 480px) {
-  .project {
+  .content-section {
+    padding: 2%;
+    margin: 0 5%;
+    font-size: 0.4rem;
+    border-radius: 5px;
     width: 100%;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-    font-size: 1px;
+    transform: translateX(-5%);
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0000001a;
   }
-  .img{
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26); /* Subtle shadow */
-    margin-top: 10%;
-    margin-bottom: 10%;
-    border-style:solid;
+
+  .img {
+    width: 100%;
+    max-width: 300px;
+    margin: 10% auto;
+    border-style: solid;
     border-width: 2.5px;
     border-radius: 10px;
     border-color: #d6d6d6;
-    width: 100%; /* Adjusts image width to fit the container */
-    max-width: 300px; /* Limits image size on smaller screens */
-    height: auto; /* Maintains aspect ratio */
-    transform: translateX(-10%);
-   
-   
+  }
+
+  .fancy {
+ 
+  font-size: 2.2rem;
+ 
+}
+
+  .LINKBOX {
+    font-size: 12px;
+    padding: 5px 10px;
   }
 }
-  @media (max-width: 480px) {
-  .fancy {
-    font-size: 1.2rem;
-  
-
-  
-  }
-  }
 </style>

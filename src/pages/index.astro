@@ -25,10 +25,10 @@ import Footer from '../components/Footer.astro';
 	
 
  
-  <section class="s0 hidden">
+  <section class="s0">
     
   </section>
-  <section class="s1 hidden">
+  <section class="s1">
 
    
 <section class="nameblk">
@@ -54,9 +54,9 @@ import Footer from '../components/Footer.astro';
   
   </section>
   <hr class="divider">
-  <section class="lf hidden">
+  
      
-  </section>
+  
   <div class="content-section">
     <div class="image-container">
       <img src="/public/demo_img_1.jpeg" alt="Description" class="section-image">
@@ -216,7 +216,7 @@ import Footer from '../components/Footer.astro';
 
 .section-image {
   width: 100%; /* Make the image responsive */
-  max-width: 800px; /* Limit the image width */
+  max-width: 90%;
   height: auto;
   border-radius: 20px; /* Optional: rounded corners for the image */
   transition: border-radius 0.3s ease,box-shadow 0.3s ease;
@@ -226,6 +226,7 @@ import Footer from '../components/Footer.astro';
 }
 
 .text-container {
+  width: 100%;
   flex: 2; /* Take up more space than the image */
   padding-left: 20px; /* Add some space between the image and the text */
 }
@@ -267,7 +268,7 @@ import Footer from '../components/Footer.astro';
     text-align: left;
   }
   .skinny {
-    font-size: 1.3rem;
+    font-size: 4vw;
   }
   .lf{
     height: 0px;
@@ -277,6 +278,10 @@ import Footer from '../components/Footer.astro';
    
   }
   .content-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+    gap: 10px; /* Add space between elements */
     transform: translateY(-10%);
     background-color: #00000007;
     padding: 5%;
@@ -289,7 +294,11 @@ import Footer from '../components/Footer.astro';
     
   }
   .content-section2 {
-    transform: translateY(-20%);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align content */
+    gap: 10px; /* Add space between elements */
+    transform: translateY(-15%);
     background-color: #00000007;
     padding: 5%;
     width: 100%;
@@ -302,7 +311,8 @@ import Footer from '../components/Footer.astro';
   }
 
   .section-image {
-    max-width: 100%;
+    max-width: 90%;
+    transform: translateX(5%);
     
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
@@ -319,10 +329,12 @@ import Footer from '../components/Footer.astro';
 
   .LINKBOX {
     font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 5px 10px;
+    width: auto;
   }
   .vertical-divider{
     height: 00px;
+    width: 0px;
   }
 }
 
