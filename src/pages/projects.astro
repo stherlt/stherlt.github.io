@@ -3,6 +3,7 @@
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+const allPosts = await Astro.glob('../pages/projects/*.md');
 ---
 
 <html lang="en">
@@ -26,36 +27,19 @@ import Footer from '../components/Footer.astro';
 <hr class="divider">
 
 </section>
+<div class="blogPostCont">
+  {allPosts.map((post) => (
+    <section class="project s4">
+      <div>
+        <h2 class="fancy">{post.frontmatter.title}</h2>
+        <p class="skinny">{post.frontmatter.description}</p>
+        <a class="LINKBOX" href={post.url}>CHECK IT OUT</a>
+      </div>
+      <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt} class="img">
+    </section>
+  ))}
+</div>
 
-<section class="project s4"> 
-  <div>
-  <h2 class="fancy">| IR MESSENGER</h2>
-  <p class="skinny"> During HackED 2024 Hackathon prototyped a hardware/software hybrid project with a team of engineering students, aimed at supporting patients who routinely take medication.
-    </p>
-    <a class="LINKBOX" href="/project1/">CHECK IT OUT</a>
-  </div>
-  <img src="/public/demo_img_2.jpg" alt="Description" class="img">
-  </section>
-  
-<section class="project s4"> 
-  <div>
-  <h2 class="fancy">| IR MESSENGER</h2>
-  <p class="skinny"> During HackED 2024 Hackathon prototyped a hardware/software hybrid project with a team of engineering students, aimed at supporting patients who routinely take medication.
-    </p>
-    <a class="LINKBOX" href="/project1/">CHECK IT OUT</a>
-  </div>
-  <img src="/public/demo_img_2.jpg" alt="Description" class="img">
-  </section>
-  
-<section class="project s4"> 
-  <div>
-  <h2 class="fancy">| IR MESSENGER</h2>
-  <p class="skinny"> During HackED 2024 Hackathon prototyped a hardware/software hybrid project with a team of engineering students, aimed at supporting patients who routinely take medication.
-    </p>
-    <a class="LINKBOX" href="/project1/">CHECK IT OUT</a>
-  </div>
-  <img src="/public/demo_img_2.jpg" alt="Description" class="img">
-  </section>
 
 
 
