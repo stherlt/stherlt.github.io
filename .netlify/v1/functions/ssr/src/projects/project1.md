@@ -33,7 +33,7 @@ We will take the signal: $$f(t)=e^{-0.8|t|}$$
 
 ## Anti Aliasing
 
-![[Diagram 10.svg]]
+![Diagram 10.svg](Diagram 10.svg)
 
 $$
 H_{aa}(w)=\begin{cases} 
@@ -45,5 +45,5 @@ $$
 
 
 **Summary:**
-![[Diagram 11.svg]]
+![Diagram 11.svg](Diagram 11.svg)
 Models: $h[k]$: unit impulse response, $y[k]=h[k]*f[k]$ and difference equation

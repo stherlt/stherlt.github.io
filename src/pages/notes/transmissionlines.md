@@ -37,18 +37,18 @@ For overhead transmission lines, the conductors are suspended from a pole or a t
 # Modelling of Power Lines
 
 ### **For Short Lines (<80km)** 
-![[Diagram 32.svg]]
+![Diagram 32.svg](Diagram 32.svg)
 Here we have a total series impedance of:$$Z=zl=(R+jwl)l$$Where $l$ is line length, and $z$ is the series impedance per unit length
 
 ### **For Medium Length (80-250km)**
-![[Diagram 33.svg]]
+![Diagram 33.svg](Diagram 33.svg)
 Total Series Impedance:$$Z=zl=(R+jwl)l$$Total shunt admittance:$$Y=yl$$
 $y=jwc$ and is the shunt admittance per unit length (Shunt means phase to ground)
 
 We must split the shunt admittance into equal halves and place them at the two ends of the line. This model is called a nominal $\pi$ circuit.
 
 ### **For Long Line (>250km)**
-![[Diagram 34.svg]]
+![Diagram 34.svg](Diagram 34.svg)
 $$z'=zF_1$$
 $$Y'=YF_2$$
 Correction Factors: $$F_1=\frac{sinh(rl)}{rl}$$
@@ -92,7 +92,7 @@ The small shunt conductance ($3.7*10^{-7}$) is typically neglected. (In practice
 
 ## **ABCD** Parameters
 
-![[Pasted image 20241125112311.png]]
+![Pasted image 20241125112311.png](Pasted image 20241125112311.png)
 Here $S$ is the sending line, and $R$ is the receiving line
 
 **Note:**
@@ -102,18 +102,18 @@ Here $S$ is the sending line, and $R$ is the receiving line
 Now, ABCD parameters are model parameters, which are functions of $R,L,C,l$
 
 1. ABCD Parameters of a short line:
-![[Pasted image 20241125112816.png]]
+![Pasted image 20241125112816.png](Pasted image 20241125112816.png)
 Now, the parameters must satisfy $AD-BC=1$ for a linear and passive network
 
 2. ABCD Parameters of medium-length line
-![[Pasted image 20241125113413.png]]
+![Pasted image 20241125113413.png](Pasted image 20241125113413.png)
 $$\bar{V}_R+(\bar{I}_R+\bar{I}_{sh1})Z=\bar{V}_R(1+\frac{YZ}{2})+Z\bar{I}_R$$
 $$\bar{I}_S=\bar{I}_R+\bar{I}_{sh1}+\bar{I}_{sh2}=\bar{I}_{R}+\frac{Y}{2}\bar{V}_R+\frac{Y}{2}\bar{V}_S$$
 
 
 ---
 **The exact** $\pi$ circuit model of a lossless line has the following form:
-![[Diagram 48.svg]]
+![Diagram 48.svg](Diagram 48.svg)
 $$Z'=zlF_1=jwLlF_1$$
 $$\frac{Y'}{2}=\frac{yl}{2}F_2=\frac{jwCl}{2}F_2$$
 $$F_1=\frac{sinh(rl)}{rl},\;F_2=\frac{tanh(rl/2)}{rl/2}$$
@@ -148,4 +148,4 @@ A wavelength is the distance required to change the phase of the voltage by $360
 
 So $\bar{V}(x)$ changes phase by $2\pi$ when $x=\frac{2\pi}{B}$, ($B=W\sqrt{WL}$)$$\text{Wavelength: }\lambda=\frac{2\pi}{B}=\frac{2\pi}{W\sqrt{LC}}=\frac{1}{f\sqrt{LC}}$$
 Typically $f=60Hz$, $\frac{1}{\sqrt{LC}}\approx 3*10^8m/s$, so: $$\lambda=\frac{3*10^8}{60}=5000km$$ So typical line length is only a small fraction of the wavelength. For typical transmission lines:
-![[Diagram 49.svg]]
+![Diagram 49.svg](Diagram 49.svg)

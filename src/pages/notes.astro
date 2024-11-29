@@ -62,6 +62,15 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.062); /* Subtle shadow */
 
 }
+@media (min-width: 900px) {
+  .blogPostCont {
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(2, 50%);
+    gap: 20px;
+   
+  }
+  }
 
 @keyframes welcomepulse {
   0% {
@@ -176,18 +185,19 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
 .s4{
 
   margin-top: 2%;
+ 
   border-left: solid;
   border-bottom: solid;
   border-top: dashed;
   border-color: #000000 ;
-  transform: translateX(3%);
+  box-shadow:  10px 10px 0px rgba(0, 0, 0, 0.993);
   background-color: #d6d6d600;
   padding: 5%;
-  border-radius:  10px;
+  border-radius:  1px;
   border-width: 2px;
 }
 .s4:hover{
-  transform: translateX(3%);
+  transform: translateX(0%);
   background-color: rgba(135, 151, 153, 0.274);
 }
 .s4 img:hover {
@@ -216,6 +226,11 @@ const allPosts = await Astro.glob('../pages/notes/*.md');
    
    
   }
+  .s4{
+    margin-top: 10%;
+    transform: translateX(5%);
+  }
+  
 }
   @media (max-width: 480px) {
   .fancy {

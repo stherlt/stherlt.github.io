@@ -400,7 +400,7 @@ Code:
 
 **Electrical Characteristics**
 
-![[Pasted image 20240926093622.png]]
+![Pasted image 20240926093622.png](Pasted image 20240926093622.png)
 *ATtiny13A Max Electrical Ratings, via 18.1 of datasheet*
 
 ## Overview of Electrical Characteristics Section in Datasheet
@@ -424,7 +424,7 @@ Electrical_System_1 --> System_2
 ## Logic Levels (ECE 210 Review)
 - Logic levels _must_ match
 - For the MCU as an output, the actual logic levels output depend on the *supply voltage* 
-![[Diagram.svg]]
+![Diagram.svg]
 # Notation: 
 $V_{OH_{MIN}}$ is the minimum voltage that a device can output when communicating a `1`
 
@@ -434,7 +434,7 @@ $V_{OL_{MIN}}$ or $GND$ is the minimum for `0`
 
 $V_{OL_{MAX}}$ is the maximum voltage output when communicating a `0`
 
-![[Diagram 1.svg]]
+![Diagram 31](Diagram%2031.svg)
 
 # Current Capabilities
 > To ensure proper operation based on current provided
@@ -445,7 +445,7 @@ $V_{OL_{MAX}}$ is the maximum voltage output when communicating a `0`
 *Do not exceed these or, you will damage the device*, operating at the maximum allowed is not a good idea, the device will be stressed, we should utilize a current limiting resistor to prevent the circuit from become stressed, we will select $R$ the resistance value assuming DC operation and a 10% safety margin on max current:
 
 *Example:*
-![[Diagram 3.svg]]
+![Diagram 3.svg]Diagram%203.svg
 $V_{fwd}=1.7V$ and $I_{maxDC}=200mA$, select R value:
 Restrictive device is the MCU which has a maximum current for $PB0$ of 40mA, 
 $$I_{max}=40mA, \; 40-0.1(40)=36mA,\text{(accounting for safety margin)}$$
@@ -455,12 +455,12 @@ We would most likely then utilize a 100$\ohm$ resistor
 # Types of Digital Outputs
 Normal digital outputs are push-pull outputs
 
-![[images 1.png]]
+![images 1.png](images 1.png)
 *CMOS Inverter* - this is the overall schematic for the pins on the MCU, the top half is pushing logic `1` while the bottom pulls logic `0`, top half is SOURCING current, and bottom is SINKING current
 
 
 We also will see open-drain outputs on same devices, this looks like the lower half of the CMOS inverter, it cannot source anything, rather it can *ONLY* sink. We can use it in tandem with a pull up resistor to drive a LED.
-![[Diagram 4.svg]]
+![Diagram 4.svg](Diagram%204.svg)
 
 This is *Useful* for "wired-or" output. However, do not connect multiple push-pull outputs together, this results in *CONTENTION* 
 
@@ -565,7 +565,7 @@ $\rightarrow$Disable interrupts when accessing (r/w) shared multi-byte data. To 
 
 **Interrupts and Flowcharts**
 Main and ISRs are in different contexts and so have different flowcharts
-![[Diagram 7.svg]]
+![Diagram 7.svg](Diagram%207.svg)
 
 ---
 
@@ -602,7 +602,7 @@ The selection here will depend on the application, sometimes qualified by the nu
 ---
 The 16-bit timer/counter0 has the problem of potential race condition associated with `uint16-t` data types. The problem is also present because of and internal "TEMP" register used by the CPU to keep 16-bit counter values together
 
-![[Diagram 8.svg]]
+![Diagram 8.svg](Diagram%208.svg)
 
 Here the TEMP register is used by other 16-bit register accesses! The solution is to disable interrupts when accessing 16-bit registers.
 
@@ -618,7 +618,7 @@ Useful for taking a snapshot of timer when a event occurs:
 
 These times can be used by your program to measure periods, pulse widths, etc
 
-![[Diagram 9.svg]]
+![Diagram 9.svg](Diagram%209.svg)
 > Programming configured for rising edge capture, this event will put the TCNT1 value in the 16-bit ICR1, and set flag ICF1
 
 The value in ICR1, must be read and the flag must be cleared (by writing a "1" to it), before next edge comes along. You can check to see if the counter overflows by checking the timers overflow flag, sometimes physical limitations make this process simpler.
@@ -693,7 +693,7 @@ The *TOP* value can be configured to use a hard-wired value or the contents of a
 2. On its way counting up, the timer at some point will equal the value we put in the output compare register associated with the pin. When this occurs, the pin is either **cleared** or **set**.  $\Rightarrow$This sets the **DUTY CYCLE**.
 
 Assuming we count to:`0C0A = TOP = 0x7F`, and if `0CR0B` is initially `0x3F`
-![[Diagram 12.svg]]
+![Diagram 12.svg](Diagram%2012.svg
 *Here we have roughly a 50% Duty Cycle*
 	
 If `0CR0B` is `0x00`: high time in normal mode is 1 clock cycle
@@ -701,19 +701,19 @@ If `0CR0B` is `0x00`: high time in normal mode is 1 clock cycle
 ###### Phase-Correct PWM
 
 This mode keep pulses aligned in the center of the period, important to some applications. *Dual slope* operation is used to achieve this.
-![[Diagram 13.svg]]
+![Diagram 13.svg](Diagram%2013.svg)
 ###### Phase and Frequency Correct PWM
 
 A *period/frequency anomaly* is created when the *TOP* value is changed, this mode repairs this by updating the buffered output compare register when the timer count is $0$. 
 
-![[Diagram 14.svg]]
+![Diagram 14.svg](Diagram%2014.svg)
 
 ---
 # Example:
 Configure the ATtiny2313A's `timer1` to generate phase-correct 20% duty cycle 1kHz waveform, if the system clock is 2MHz. Generate this on `0C1B` pin.
 
 $1kHz \leftrightarrow T  =1ms$, and $2MHz \leftrightarrow T  =500ns$, thus $20\% = 200\mu s$  
-![[Diagram 15.svg]]
+![Diagram 15.svg](Diagram%2015.svg)
 from the datasheet we can find: $$f_{{0C1B}_{{PC}_{PWM}}}=\frac{f_{CLKI/O}}{2NTOP}$$
 Where $N$ is a time prescaler 1, 8, 64 etc
 
@@ -733,7 +733,7 @@ Modes in **BLUE** are the "better" options
 
 # **Timers**
 These times can be used by your program to  measure periods, pulse widths and more:
-![[Pasted image 20241024142153.png]]
+![Pasted image 20241024142153.png](Pasted image 20241024142153.png)
 *On rising edge* presuming it is configured for rising-edge capture, the event will put `TCNT1` value into the 16-bit `ICR1` register and set the `ICF1` flag.
 
 The value in `ICR1` must be read and the flag must be cleared (via writing a 1) before the next edges occurs. 
@@ -743,7 +743,7 @@ The value in `ICR1` must be read and the flag must be cleared (via writing a 1) 
 
 ### 1. Output Capture
 - One such way is to utilize output capture or OC
- ![[Pasted image 20241024142514.png]]
+ ![Pasted image 20241024142514.png](Pasted image 20241024142514.png)
  When the value in the timer equals the value in the O/P compare register, a flag is set. The flag can generate an *interrupt.*  
 
 
@@ -751,7 +751,7 @@ The value in `ICR1` must be read and the flag must be cleared (via writing a 1) 
 
 ## Pulse Accumulator
 
-![[Diagram 17.svg]]
+![Diagram 17.svg](Diagram%2017.svg)
 - When the timer is configured to be clocked by an external source (pin), we can use the timer/counter to count the number of incoming pulses.
 - Continent for things like tachometer (A _tachometer_ is an instrument measuring the rotation speed of a shaft or disk, as in a motor or other machine. A _tachometer_ is an instrument measuring the rotation speed of a shaft or disk, as in a motor or other machine.)
 - Taking time into account, we can use the count to determine things like RPM. 
@@ -772,7 +772,7 @@ There are three typical serial communication protocols that are seen when workin
 **UART**(synchronous), **SPI**(asynchronous),**I2C**(asynchronous), we also have other examples such as USB and Ethernet
 
 When we want to add hardware to a system, we need to consider *communication*.
-![[Diagram 21.svg]]
+![Diagram 21.svg](Diagram%2021.svg)
 In synchronous communication we will send over a clock signal, whereas in asynchronous we will have a relatively similar clock in all the devices. Data is sent over a line and over a time, this is **not** as fast as parallel interface. 
 
 We have two types of transmission:
@@ -784,7 +784,7 @@ There are a number of standards that fall into this category, vary in voltages, 
 
 A peripheral ready for communication can be denoted as a "Universal Asynchronous Serial Receiver/Transmitter"(UART), can sometimes be called USART - for synchronous capabilities
 
-![[Diagram 25.svg]]
+![Diagram 25.svg](Diagram%2025.svg)
 Asynchronous data format (`8E2`):
 - `8 DATA BITS`
 - `EVEN PARITY BIT`
@@ -804,12 +804,12 @@ In order to properly understand this we need to account for *time*, recall that 
 ## Typical TX/RX Process
 - The AVR USART has various interrupt possibilities and error detection mechanisms
 - AVR LibC Stdio demo has a sample using the UART such that, like the LCD, information can be sent using the `vprintf()` family of routines (Rx via scanf() family)
-![[Diagram 26.svg]]
+![Diagram 26.svg](Diagram%2026.svg)
 
 # Synchronous Serial: Serial Peripheral Interface (SPI)
 This functionality may be offered by the synchronous portion of a USART or by an SPI-specific peripheral. The SPI *master* is the device that coordinates and controls transfers and provides the clock. The SPI *Slave* device contains a shift register that will accept or provide data when the device is selected and clocked. 
 
-![[Diagram 29.svg]]
+![Diagram 29.svg](Diagram%2029.svg)
 **Note:** MOSI - Master Out Slave In, MISO - Master In Slave Out
 
 Once configured, a write the SPDR (SPI data register) will automatically transfer a byte (usually) of data. Data is shifted out by the master usually MSBIT first, this bit is shifted in to the LSBIT of the slave. Meanwhile, the slave shifts out of its MSBIT placed into the masters LSBIT. After a burst of 8-bits a byte would have been exchanged (idk why Loren said this, seems redundant?). Configuring the SPI to work involves establishing an appropriate clock frequency and that the master slave match with respect to the following:
@@ -819,7 +819,7 @@ Once configured, a write the SPDR (SPI data register) will automatically transfe
 
 ## Daisy Chaining Multiple Devices
 Utilizing SPI it is possible to daisy chain multiple devices:
-![[Diagram 30.svg]]
+![Diagram 30.svg](Diagram%2030.svg)
 
 ## Important Takeaway
 Many IC-implemented peripherals use this protocol (utilize SPI protocol), i.e in a application where we had a perfect MCU but missing something, we could add on top the missing feature via a peripheral.
@@ -829,7 +829,7 @@ Adding *more* digital I/O to a system:
 `74HC165` - parallel to serial converter
 `74HC595` - serial to parallel converter
 
-![[Diagram 31.svg]]
+![Diagram 31.svg](Diagram%2031.svg)
 
 
 # Synchronous Serial
@@ -843,7 +843,7 @@ Inter-IC communication is more involved than SPI:
 With complexity comes some benefits, including that with 2 lines several devices can be connected
 
 **Connection Overview:**
-![[Diagram 40.svg]]
+![Diagram 40.svg](Diagram%40.svg
 
 TWI (Two-wire Interface) and parts of the USI (Universal Serial Interface) are quite similar, but can require added firmware for full $I^2C$ compliance.
 
@@ -890,7 +890,7 @@ These converters are normally available on low end MCU's, we can think about lab
 Precise conversion may be required by some applications
 
 **Block Diagram:**
-![[Diagram 41.svg]]
+![Diagram 41.svg](Diagram%2041.svg)
 This applies to ADC or DAC: We can find the resolution of the converter via:$$SS=LSB=\frac{V_{ref}}{2^n}=\frac{V_{max}}{2^n-1}$$
 *Where SS is step size, and LSB is least significant bit, $V_{max}$ is the max voltage that can be applied or output by a converter* 
 

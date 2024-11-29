@@ -24,14 +24,14 @@ Published on: 2024-11-28
 	**Note:** We know from Common Emitter Amp that $A_r=-\frac{I_CR_C}{V_T}=g_mR_C$ 
 
 The following two schemes are not recommended "**Bad Approaches**"
-![[Pasted image 20241030100926.png]]
+![Pasted image 20241030100926.png](Pasted image 20241030100926.png)
 Reasoning:
 *a.* small variations in $V_{BE}$ results in large variations in $i_c$
 *b.* $I_C$ is not reasonably predictable
 
 **Classical Discrete Bias Arrangement**
 We will instead use this arrangement, the addition of $R_E$ provides *negative feedback* and stabilizes the Q-point
-![[Pasted image 20241030101413.png]]
+![Pasted image 20241030101413.png](Pasted image 20241030101413.png)
 *From (b.)* by doing KVL on 'L' we can find:
 $$V_{BB}-I_BR_B-V_{BE}-I_ER_E=0$$
 Then using: $I_B=\frac{I_E}{\beta+1}$, we can find: 
@@ -54,7 +54,7 @@ And we will know: $I_E\approx \frac{V_{BB}}{R_E}$
 2. **Divider Current Rule of Thumb**$$I_B=\frac{I_E}{\beta+1}\approx \frac{I_E}{100}<<I_{DIV}$$*Such that* $V_B\approx \frac{V_{CC}R_2}{R_1+R_2}$, so we *neglect* $I_B$ 
 	- Here we are creating negative feedback to stabilize the $V_B$, $R_E$ provides negative feedback which stabilizes the bias current
 #### **Example:**
-![[Pasted image 20241030104359.png]]
+![Pasted image 20241030104359.png](Pasted image 20241030104359.png)
 *Notes*: 
 1. Setting $I_{DIV}=I_E$ would have resulted in a design closer to: $V_i$
 ## 2. Small Signal Input Resistances
@@ -68,7 +68,7 @@ $$r_e=V_{be}/i_b=\beta/g_m,\;A_V=V_{CE}/V_{be}=-g_mR_C$$
 # BJT Configurations (Lec 23)
 
 ## 1. The 3 Basic Configurations 
-![[Pasted image 20241104102935.png]]
+![Pasted image 20241104102935.png](Pasted image 20241104102935.png)
 
 
 ## 3. The Common Emitter
@@ -81,15 +81,15 @@ $$A_{vo}=\frac{v_o}{v_i}=\frac{-g_mv_\pi R_c}{V_\pi}$$
 $$\therefore A_{vo}=-g_mR_c$$
 and we can also take based on the conditions:
 $$R_o=R_c$$
-![[Pasted image 20241104103550.png]]
+![Pasted image 20241104103550.png](Pasted image 20241104103550.png)
 
-![[Pasted image 20241104103904.png]]
+![Pasted image 20241104103904.png](Pasted image 20241104103904.png)
 
 *We know that:* $$R_{in}\equiv \frac{v_i}{i_i}=\frac{v_i}{i_i}=$$
 ## 4. Common-Emitter Amp With An Emitter Resistance
 - Adding a resistor $R_e$ in the AC path of the $C_E$ amp provides several performance advantages relating to negative feedback. At the costs of a moderate reduction in gain.
 - *Note:* as a rule of thumb, use the $\pi$ model whenever the emitter is connected to AC ground, if not T-model is more convenient.
-![[Diagram 28.svg]]
+![Diagram 28.svg](Diagram 28.svg)
 ### Small Signal Analysis Is As Follows:
 *Neglecting the early effect*
 
@@ -113,7 +113,7 @@ To summarize, including a resistance $R_e$ in the emitter of the CE amplifier re
 5. The high-frequency response is significantly improved (as we will see in chapter 10)
 
 ### Adding The Classical Bias Arrangement:
-![[Pasted image 20241106102846.png]]
+![Pasted image 20241106102846.png](Pasted image 20241106102846.png)
 
 First, note the resistance in the emitter path:
 For DC: $R_e+(R_E-R_e)=R_E$
@@ -125,9 +125,9 @@ $$R_{in}\equiv \frac{v_i}{i_i}=R_{B1}\|R_{B2}\|R_{ib}=R_{B1}\|R_{B2}\|(\beta +1)
 $$A_v\equiv \frac{v_o}{v_i}= \frac{-\alpha (R_c\|R_c)}{r_e+R_e}$$
 $$\therefore G_v=-\frac{R_{in}}{R_{in}+R_{sig}}\times \alpha \frac{(R_C\|R_L)}{r_e+R_e}$$
 ## Examples: 
-![[Pasted image 20241106110033.png]]
+![Pasted image 20241106110033.png](Pasted image 20241106110033.png)
 # Common-Base Amplifier (Lec 24)
-![[Pasted image 20241108100531.png]]
+![Pasted image 20241108100531.png](Pasted image 20241108100531.png)
 *Here we will utilize the T-model for simplicity, as $R_{sig}$ is in the emitter path, we will also neglect the early effect* 
 	$V_{in}$ on emitter and $V_{out}$ on collector
 
@@ -141,13 +141,13 @@ $$A_{vo}=g_mR_c$$
 3. CB Amps have food high-freq properties and are often combined with CE stages to achieve high freq amp
 
 ## Discrete CB Amplifier
-![[Pasted image 20241108101200.png]]
+![Pasted image 20241108101200.png](Pasted image 20241108101200.png)
 
 ### Example:
-![[Pasted image 20241108102610.png]]
+![Pasted image 20241108102610.png](Pasted image 20241108102610.png)
 # Voltage Buffer Amplifiers (Lec 25)
 ## 1. The Need For Buffer Amps
-![[Pasted image 20241108102808.png]]
+![Pasted image 20241108102808.png](Pasted image 20241108102808.png)
 - We discussed before that we often need to drive low resistance loads with a high resistance source
 - Not using a buffer results in poor power transfer
 - A buffer amp can *greatly* improve this situation
@@ -158,18 +158,18 @@ $$A_{vo}=g_mR_c$$
 
 ## 2. Emitter Follower Amplifier (CC)
 - The Common-collector amplifier
-![[Pasted image 20241108103100.png]]
+![Pasted image 20241108103100.png](Pasted image 20241108103100.png)
 - We will use the T-model
 
 ### Small Signal Analysis Solutions:
-![[Pasted image 20241108103227.png]]
+![Pasted image 20241108103227.png](Pasted image 20241108103227.png)
 
 **Notes:**
 1. From perspective of the source it "sees" $R_{in}=(\beta+1)R_L$ as an effective load
 2. While no voltage gain is provided, the CC Amp provides current (and power) gain, with $A_i=\frac{i_D}{i_i}=\frac{i_e}{i_b}=\beta+1$ 
 
 ## 3. Thevenin Representation of the Emitter Follower
-![[Pasted image 20241108103638.png]]
+![Pasted image 20241108103638.png](Pasted image 20241108103638.png)
 ## 4. The Discrete Circuit Emitter Follower
 ![[
 
@@ -178,7 +178,7 @@ $$A_{vo}=g_mR_c$$
 
 
 # MOSFET Induced Channel (Lec 27)
-![[Pasted image 20241120100503.png]]
+![Pasted image 20241120100503.png](Pasted image 20241120100503.png)
 For small $V_{DS}$, the channel conductance can be expressed by:
 
 $$g_{DS}=(\mu_nC_{ox})(W/L)V_{ov}$$
@@ -195,7 +195,7 @@ And so we can define $W/L$ as the device aspect ratio.
 3. Due to insulating gate oxide, the DC current relationships are simple; $i_D=i_s$, and $i_G=0$
 
 ### Operation as $v_{DS}$ is Increased
-![[Pasted image 20241120101441.png]]
+![Pasted image 20241120101441.png](Pasted image 20241120101441.png)
 
 For increasing $v_{DS}$: $$i_D=[k_n'(W/L)(v_{ov}-\frac{v_{DS}}{2})]v_{DS}$$
 or $$i_D=k_n'(W/L)(v_{ov}v_{DS}-\frac{1}{2}v_{DS}^2)$$ and for small $v_{DS}$ the term becomes negligible 
@@ -217,7 +217,7 @@ The drain current saturates once $v_{DS}$ exceeds the pinch-off value, we say th
 
 ### MOSFET Current-Voltage Plot
 The $i_D-v_{DS}$ plot is analogous to the BJT plot, however active mode and saturation mode are reversed (do to historical errors).
-![[Pasted image 20241120104021.png]]
+![Pasted image 20241120104021.png](Pasted image 20241120104021.png)
 
 We can define:
 **BJT Saturation Mode** = **MOSFET Triode Mode**
@@ -233,7 +233,7 @@ We can also observe the difference that in the MOSFET the $v_{GS}$ impacts the b
 *For* small $v_{DS}$, we can say: $$i_D=[k_n'(W/L)v_{ov}]v_{DS}\equiv g_{DS}v_{DF}$$
 
 # MOSFET Circuit Symbol (Lec 28)
-![[Pasted image 20241122100234.png]]
+![Pasted image 20241122100234.png](Pasted image 20241122100234.png)
 
 **Circuit Symbols Explained** (for above cases)
 
@@ -244,7 +244,7 @@ We can also observe the difference that in the MOSFET the $v_{GS}$ impacts the b
 **c.** Further simplified model, we use this when the body contact is assumed to be connected to the source (we will use this one in ECE 302)
 
 **NMOS CHARACTERTISICS SUMMARY:**
-![[Pasted image 20241122100924.png]]
+![Pasted image 20241122100924.png](Pasted image 20241122100924.png)
 
 **The Three Modes of Operation**
 
@@ -261,12 +261,12 @@ For the ideal MOSFET, the saturation current is independent of $v_{DS}$
 $$i_D=\frac{1}{2}k_n'\frac{W}{L}(v_{GS}-v_{tn})^2$$
 
 **N Type Overview:**
-![[Diagram 45.svg]]
+![Diagram 45.svg](Diagram 45.svg)
 
 
 # P-Channel MOSFET - PMOS (Lec 29)
 
-![[Pasted image 20241125102222.png]]
+![Pasted image 20241125102222.png](Pasted image 20241125102222.png)
 
 To induce a P-Channel, we need:
 $$|v_{gs}|>|v_{tp}|$$
@@ -276,17 +276,17 @@ Where $\mu_p$ is the *hole surface mobility*, and $k_p'$ is the *PMOS Transcondu
 
 ## The CMOS (Complementary MOS)
 NMOS & PMOS FETS can be fabricated in a single IC process, termed CMOS. CMOS is by far the dominant technology for both digital and analog circuit functions. 
-![[Pasted image 20241125102902.png]]
+![Pasted image 20241125102902.png](Pasted image 20241125102902.png)
 CMOS is more difficult to fabricate, but makes possible the implementation of powerful circuit elements, including a nearly ideal digital logic inverter-NOT gate (Chap 13, will touch on more later). Characterized by:
 - Very low static (when not switching) power dissipation (consumes very little power when at a steady logic level)\
 - Excellent noise and 'fan-out' characteristics 
 
 **Transistor Scaling - MOORES LAW**
-![[Pasted image 20241125103439.png]]
+![Pasted image 20241125103439.png](Pasted image 20241125103439.png)
 Reduced gate length by about 30% every 2-3 years, below 10nm the device is called a thin FET, will be a different structure
 
 # Amplification With MOSFETS (Lec 30)
-![[Pasted image 20241127100414.png]]
+![Pasted image 20241127100414.png](Pasted image 20241127100414.png)
 Consider the common source skeleton circuit, in saturation mode, small changes in $v_I=v_{GS}$ produce relatively large changes in $v_0=v_{DS}$:
 $$i_D=\frac{1}{2}k_n(v_{GS}-v_{tn})^2$$$$v_{DS}=V_{DD}-i_DR_D$$
 $$v_{DS}=V_{DD}-\frac{1}{2}k_nR_D(v_{GS}-V_{tn})^2$$
@@ -298,7 +298,7 @@ The output voltage swing is restricted to the boundaries set by $V_{BD}$ and $V_
 Recall that the triode boundary $v_{DS}=v_{ov}=v_{GS}-v_{tn}$
 For point B $\therefore V_{DS}|_B=V_{Gs}|_B-V_{tn}$, B indicates the triode-saturation boundary
 
-Substituting 'B' into 'A' yields:$$V_{DS}|_B=V_{OV}|_B=V_{GS}|_B-V_{tn}=\frac{\sqrt{2k_nR_DV_{DD}+1}-1}{k_nR_D}$$![[Pasted image 20241127101912.png]]
+Substituting 'B' into 'A' yields:$$V_{DS}|_B=V_{OV}|_B=V_{GS}|_B-V_{tn}=\frac{\sqrt{2k_nR_DV_{DD}+1}-1}{k_nR_D}$$![Pasted image 20241127101912.png](Pasted image 20241127101912.png)
 
 **Linear Small Signal Excursion Around A Bias Q Point**
 Here, $V_{GS}$ sets the DC bias point (Q-Point):$$V_{DS}=V_{DD}-\frac{1}{2}k_nR_D(V_{GS}-V_t)^2$$
@@ -311,7 +311,7 @@ And then: $$A_v=\frac{-I_D R_D}{\frac{v_{ov}}{2}}=-\frac{V_{RD}}{\frac{v_{ov}}{2
 2. Typically $A_{vmax}\approx 10-20 [v/v]$ 
 
 **Small Signal Operation and Models**
-Using the skeleton circuit, in active mode we have: $$i_D=\frac{1}{2}k_n(V_{GS}+v_{gs}-V_{tn})^2$$![[Pasted image 20241127102742.png]]
+Using the skeleton circuit, in active mode we have: $$i_D=\frac{1}{2}k_n(V_{GS}+v_{gs}-V_{tn})^2$$![Pasted image 20241127102742.png](Pasted image 20241127102742.png)
 From this, we can state the condition for the small signal approximations to be valid:
 *We Need:*$$\frac{1}{2}k_nv_{gs}^2<<k_n(V_{GS}-V_{tn})v_{gs}$$
 $$\therefore v_{gs}<<2(V_{gs}-V_{tn})$$

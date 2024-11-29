@@ -14,11 +14,11 @@ tags: ["notes"]
 - Unidirectional circuit element:
 	- For *Positive* voltage (in anode to cathode direction), it passes current w/ no resistance, i.e acts like a *short circuit*.
 	- For *negative* voltage, it acts like an infinite resistor, *open circuit*
-	![[Pasted image 20241026111826.png]]
+	![Pasted image 20241026111826.png](Pasted image 20241026111826.png)
 	Remember that the anode is positive side, and cathode is negative (looks like a negative sign turned)
 
 Notes on the diode: 
-1. It is a highly nonlinear circuit element, unlike an ideal resistor, for example, the diodes i-v characteristic does not behave like a straight line: ![[Pasted image 20241026112014.png]]
+1. It is a highly nonlinear circuit element, unlike an ideal resistor, for example, the diodes i-v characteristic does not behave like a straight line: ![Pasted image 20241026112014.png](Pasted image 20241026112014.png)
 2. Nonlinear devices such as a diode are essential to signal processing & microelectronics
 3. Most semiconductor diodes are based on the pn junction. Furthermore, pn junctions (Diodes), are found in nearly every electronic and optoelectronic device which is used.
 4. Real diodes cannot conduct infinite forward current or withstand infinite reverse voltage. We will typically use resistors to limit current and voltage when using diodes
@@ -59,7 +59,7 @@ Some deviations of real diodes from ideal diodes:
 
 **Reverse Bias!**
 Diodes are not perfect open circuits under reverse bias (when a negative voltage is applied), we call the voltage required to exhibit reverse bias the breakdown voltage $v_{zk}$, this property means the current will pass freely in these conditions with a approximately fixed voltage drop - we *will utilize this property for voltage regulation*
-![[Pasted image 20241026114156.png]]
+![Pasted image 20241026114156.png](Pasted image 20241026114156.png)
 
 Now, in the forward and reverse, but **NOT THE BREAKDOWN REGION**, we can express i-v relationship as follows:
 
@@ -81,7 +81,7 @@ $$v_2=v_1=2.3nv_Tlog(\frac{I_2}{I_1})$$
 The apparent threshold or turn on behavior under forward bias, is a result of the exponential i-v behavior within a diode. By plotting the current behavior on a scale, we can observe the cut in voltage.
 
 For silicon diodes we can observe the following behavior:
-![[Pasted image 20241026115348.png]]
+![Pasted image 20241026115348.png](Pasted image 20241026115348.png)
 
 ##### How do we model the forward biased diode?
 One such way is to utilize the constant drop model, which describes the diode as being a 0.7V source. This offers time inefficient and highly effective modelling of circuits which utilize diodes, albeit they are not exactly accurate.
@@ -92,12 +92,12 @@ This model is piecewise linear, and only slightly more complicated than the idea
 1. Replace each diode with a 0.7V diode source for on, or a open circuit for off
 2. Solve the linear circuit
 3. check with the feasibly and non feasible states
-![[Pasted image 20241026120055.png]]
+![Pasted image 20241026120055.png](Pasted image 20241026120055.png)
 
 
 ### Limiting and Protection Circuits
 We can utilize diodes to limit voltage excursions, this can be used either to shape waveforms (rectifiers) or to protect sensitive circuitry. 
-![[Pasted image 20241026120450.png]]
+![Pasted image 20241026120450.png](Pasted image 20241026120450.png)
 Consider this example here, when the voltage of the $V_0$ is equivalent to that of the voltage source below the diode, it will short circuit the path meaning vo cannot exceed v+.
 
 ### Zener Diodes
@@ -114,17 +114,17 @@ Things to know:
 4. Breakdown curve: we can express the zener breakdown curve by a straight line with a slope of $\frac{1}{r_Z}$ where we define $r_Z=\frac{{\Delta V}}{\Delta Q}$(the incremental resistance)
 5. $r_z$ is typically a few ohms, the smaller it is the better as it will enable more precise voltage regulation (more constant reverse V)
 6. We can replace the zener diode operating in reverse breakdown by a linear circuit model described by: $V_{ZT}=V_{ZD}+r_ZI_Z$, where $V_{ZD}$ is the intercept of the tangent line with horizontal axis
-![[Pasted image 20241026121824.png]]
+![Pasted image 20241026121824.png](Pasted image 20241026121824.png)
 
 ### Small Signal Model
 We can often breakdown voltages/currents into AC and DC components, we can describe this by splitting current into: $i_D(t)=I_D+id(t)$, where we can observe both the time varying and the fixed portions. 
-![[Pasted image 20241026122115.png]]
+![Pasted image 20241026122115.png](Pasted image 20241026122115.png)
 *In this example we can observe the time varying components ic and the DC IC*
 
 We will describe a fixed DC supply by $I_{DD} \;or\; V_{CC}$, and $I_c$ indicates the peak. In practice, we will observe that the *AC* component is typically **far smaller** then the DC component, thus we will denote this as the *small signal*
 
 Now, for any nonlinear circuit, the response to a relatively small variation can be observed to be approximately linear. 
-![[Pasted image 20241026122602.png]]
+![Pasted image 20241026122602.png](Pasted image 20241026122602.png)
 Here $\Delta V_{DD}$ describes the small excursion in the voltage source, if this is sufficiently small then we can describe the changes in voltage and current to be linearly related to this.
 
 To solve a circuit like this we will do the following:
@@ -136,24 +136,24 @@ Notes:
 2. This approx. is essentially the process of replacing the nonlinear i-v curve with its tangent
 
 **Return to small signal analysis when doing practice midterm, decorby said this will be on the midterm** - see lecture 6 on eclass
-![[Pasted image 20241028183830.png]]
+![Pasted image 20241028183830.png](Pasted image 20241028183830.png)
 ### Voltage Regulation
 A voltage regulator provides a nearly constant CD voltage to a load, even under the following circumstances:
 1. The supply voltage feeding the regulator varies with time (i.e has ripples)
 2. the effective load resistance (current drawn by load) varies with time
 
 We observed that a single forward-biased diode can act as a simple voltage regulator, with $v_0=0.7V$. Regulated voltage of other values can be realized by connecting several other forward biased diodes in series to increase the voltage (however this isnt exactly ideal - power inefficient)
-![[Pasted image 20241026123643.png]]
+![Pasted image 20241026123643.png](Pasted image 20241026123643.png)
 *Example of series diodes acting as a 2.1V regulator*, furthermore here the resistor is acting as a shunt resistor since it is paralleling the load
 
 ## Basic Regulator Circuit:
-![[Diagram 20.svg]]
-The top most resistor is considered our ballast resistor, we can describe this circuit with the following relationships:![[Pasted image 20241026124243.png]]
-![[Pasted image 20241026124243.png]]
+![Diagram 20.svg](Diagram 20.svg)
+The top most resistor is considered our ballast resistor, we can describe this circuit with the following relationships:![Pasted image 20241026124243.png](Pasted image 20241026124243.png)
+![Pasted image 20241026124243.png](Pasted image 20241026124243.png)
 
 ## Zener Shunt Regulator
 A Zener diode provides more flexibility in comparison to forward biased diodes in shunt regulators. 
-1. Provided it remains in breakdown:![[Pasted image 20241026124505.png]]
+1. Provided it remains in breakdown:![Pasted image 20241026124505.png](Pasted image 20241026124505.png)
 2. We must then design the circuit to ensure we keep the Zener in breakdown, thus we want to ensure that $V_Z \geq V_{ZD} \approx V_{ZK}$
 
 
@@ -169,7 +169,7 @@ $R=\frac{\rho l}{A}$ this describes the resistance in terms of length, area and 
 $\sigma=\frac{1}{\rho}$ this describes the conductivity of a material
 
 Silicon is a popular semiconductor because it can exhibit a change in conductivity of 6 orders of magnitude (from intrinsic to degen doped)
-![[Pasted image 20241026125610.png]]
+![Pasted image 20241026125610.png](Pasted image 20241026125610.png)
 
 **Intrinsic SI** - refers to a sample of pure crystalline silicon, each silicon atom is covalently bonded to its four closest neighbors, in the dark and at low temperature, intrinsic silicon is perfectly insulating - no electrons are free to move
 
@@ -183,7 +183,7 @@ Silicon is a popular semiconductor because it can exhibit a change in conductivi
 *Holes* are broken covalent bonds left behind when a e- escapes (empty states in valence band), this can be induced by various forms of energy.
 
 **EHP By Electromagnetic Energy** - Radiation with the correct wavelength can create EHPs, the photon energy must be greater than $E_g$:
-![[Pasted image 20241026130752.png]]
+![Pasted image 20241026130752.png](Pasted image 20241026130752.png)
 
 **EHP By Thermal Vibrational Energy** - At T>0 [k], atoms are in constant motion, and have thermal kinetic energy, lattice vibrations can thus occasionally break creating EHP
 
@@ -194,7 +194,7 @@ Due to the thermal energy in a Si crystal, e- and h+ are in constant motion, whe
 **Intrinsic Carrier Concentration** At thermal equilibrium and in the dark the concentration of electrons and holes is constant with time. Covalent bonds are being broken and repaired at the same rate. We can thus write: $G=R$, where G is the generation rate and R is the recombination rate. G is strongly depending on temperature, whereas R is dependent on the number of e- and h+ per unit volume. If the semiconductor is crowded with e- and h+ they are more likely to meet. Thus we can write: $R\approx np$ where n is the concentration of e- and p is the concentration of h+.
 
 In an intrinsic semiconductor there are an equal amount of e- and h+, so n=p=ni, where ni is the intrinsic carrier concentration 
-![[Pasted image 20241026140436.png]]
+![Pasted image 20241026140436.png](Pasted image 20241026140436.png)
 
 **Doped (Extrinsic) Semiconductors** - Doping involves the intentional addition of impurity atoms to greatly increase the concentration of electrons or holes. This greatly impacts the conductivity while keeping the properties of the crystal unaffected.
 
@@ -204,8 +204,8 @@ The addition of a trace amount (1ppb-1ppm) of a pentavalent atom (such as phosph
 #### P-Type Doping
 Trace amount of trivalent atom, (e.g boron), the three valance electrons form covalent bonds, leaving on unsatisfied bonding site, thus one h+ is donated 
 
-![[Pasted image 20241026141951.png]]
-![[Pasted image 20241026142027.png]]
+![Pasted image 20241026141951.png](Pasted image 20241026141951.png)
+![Pasted image 20241026142027.png](Pasted image 20241026142027.png)
 
 
 **Review lecture 12 and 13 !!!!**
@@ -214,10 +214,10 @@ Trace amount of trivalent atom, (e.g boron), the three valance electrons form co
 Transistors are three terminal devices, the voltage at one terminal controls the flow of current between the other two terminals. The BJT is constructed from two pn junctions, npn or pnp, we refer to these junctions as the EBJ - emitter base junction and CBJ - collector based junction.
 
 **NPN TYPE:**
-![[Pasted image 20241026142531.png]]
+![Pasted image 20241026142531.png](Pasted image 20241026142531.png)
 
 **PNP TYPE:**
-![[Pasted image 20241026142616.png]]
+![Pasted image 20241026142616.png](Pasted image 20241026142616.png)
 
 The BJT is a nonlinear device which has three operational modes in which we are interested in:
 
@@ -236,7 +236,7 @@ Now, it is also important to note that emitter can be expressed as p+ or n+, as 
 ###### Active Mode Operation of the BJT
 Consider a p+np BJT with a common base bias config, the base is common to the emitter sub-circuit and the collector sub-circuit. Now, DC sources $V_{EB},V_{CB}$ bias the two junctions. Thus for active mode we want $V_{EB}$ to be forwardly biasing the EBJ
 
-![[Pasted image 20241026155513.png]]
+![Pasted image 20241026155513.png](Pasted image 20241026155513.png)
 
 #### High Level Description of Active Operation
 1. Current flows easily across the forward biased Emitter-base junction, which is dominated by holes
@@ -270,38 +270,38 @@ We can find $\beta=\frac{\alpha}{1-\alpha}$, and alpha by reversing
 Our main takeaways:
 - In active mode, all currents are determined by $V_{BE}$ and approx independent of $V_{CB}$. We can think of the base as a 'valve' controlling current flow
 - We want high $\beta$ (Gain parameter), which is achieved in practice by using a heavily doped emitter and a thin base layer.
-![[Pasted image 20241028144958.png]]
+![Pasted image 20241028144958.png](Pasted image 20241028144958.png)
 
 ### Active Mode of $p^+np$ Case
 This is completely analogous to the operation of the above layout, but role of electrons and holes are *interchanged*, to forward bias EBJ and Reverse Bias CBJ (criteria of ACTIVE MODE), we must reverse the directions of the dc bias in the common base circuit. All of our equations are the same, but $V_{BE}$ is **replaced** by $V_{EB}$ 
 
 We can note that in this cause emitter and collector current flow is reversed
-![[Pasted image 20241028145010.png]]
+![Pasted image 20241028145010.png](Pasted image 20241028145010.png)
 
 ### Large Signal Equivalent Circuit Models for BJT 
 Collector terminal behaves as a nearly ideal dependent current source (only dependent on $V_{BE}$)
 ###### n+pn BJT
 $i_I=I_se^{V_{BE}/V_T}=\alpha i_E=\beta i_B$, we will use the model most convenient to the circuit we are given
-![[Pasted image 20241028145731.png]]
+![Pasted image 20241028145731.png](Pasted image 20241028145731.png)
 ###### p+np BJT
 replace $V_{BE}$ with $V_{EB}$ 
-![[Pasted image 20241028145720.png]]
+![Pasted image 20241028145720.png](Pasted image 20241028145720.png)
 
 ### Symbol Conventions for BJTS
-![[Pasted image 20241028150008.png]]
+![Pasted image 20241028150008.png](Pasted image 20241028150008.png)
 
 *We can remember that the arrow goes into n terminals, from + to -*
 
 We know that it will always be: $i_E=i_C+i_B$, currents will be in positive direction if their moving in the direction of the arrow. In **Active Mode** VBE/VEB is +ve
 
-![[Pasted image 20241028151256.png]]
+![Pasted image 20241028151256.png](Pasted image 20241028151256.png)
 
 **In order to operate in active mode:** we need $V_{CB}\geq -0.4V$ for n+pn and $V_{BC}\geq -0.4V$ for p+np. Furthermore we need a "apparent threshold", voltage of 0.5V for it to conduct appreciably. 
 
 **Rapid Analysis** we can replace VBE, or VEB in 0.7V
 
-**Early Effect:**![[Pasted image 20241028152847.png]]
-![[Pasted image 20241028152942.png]]
+**Early Effect:**![Pasted image 20241028152847.png](Pasted image 20241028152847.png)
+![Pasted image 20241028152942.png](Pasted image 20241028152942.png)
 
 **Alternative Common-Emitter Graph**
-![[Pasted image 20241028153407.png]]
+![Pasted image 20241028153407.png](Pasted image 20241028153407.png)
