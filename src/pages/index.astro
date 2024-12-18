@@ -38,17 +38,17 @@ import Footer from '../components/Footer.astro';
     <h2 class="skinny">| ELECTRICAL ENGINEERING STUDENT</h2>
     <p> </p>
     <div class="index-links">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/seantheriault/" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
       </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/stars/stherlt/lists/projects" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle;">
       </a>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn-icons-png.flaticon.com/128/1250/1250592.png" alt="Contact" style="width: 24px; height: 24px; vertical-align: middle;">
     </a>
    </div>
-   <p class="skinny">my personal portfolio</p>
+   <p class="skinny">Personal Portfolio</p>
   
    </section>
   
@@ -64,15 +64,22 @@ import Footer from '../components/Footer.astro';
     <div class="vertical-divider"></div>
     <div class="text-container">
       <div class="fsmall">| PROJECTS</div>
-      <p>Check out the projects I have worked on</p>
-      <a class="LINKBOX" href="/projects/">Check It Out</a>
+      <p>Check out the projects I have worked on, from embedded IR communication devices to python chatbots!</p>
+      <a class="LINKBOX" href="/projects/">| READ MORE</a>
     </div>
   </div>
   <hr class="divider">
   <div class="content-section2">
     <div class="text-container">
       <div class="fsmall">| ABOUT</div>
-      <p>Your content goes here. Add your text or description about the image or any topic you want to include in this section.</p>
+      <p>Hi I'm Sean, a third year Electrical Engineering student at the University of Alberta, with a interest in hardware, electronics, robotics, and communication systems. 
+        
+        On this site you can find:
+      </p>
+      <p>- My project portfolio</p>
+      <p>- Notes on various topics</p>
+      <p>- My visual arts gallery</p>
+      <br>
     </div>
     </div>
 
@@ -84,8 +91,8 @@ import Footer from '../components/Footer.astro';
     <div class="vertical-divider"></div>
     <div class="text-container">
       <div class="fsmall">| GALLERY</div>
-      <p>Your content goes here. Add your text or description about the image or any topic you want to include in this section.</p>
-      <a class="LINKBOX" href="/gallery/">Check It Out</a>
+      <p>Visual arts gallery</p>
+      <a class="LINKBOX" href="/gallery/">| TAKE A LOOK</a>
     </div>
   </div>
   <hr class="divider">
@@ -93,7 +100,7 @@ import Footer from '../components/Footer.astro';
     <div class="text-container">
       <div class="fsmall">| NOTES</div>
       <p>Collection of notes on various topics</p>
-      <a class="LINKBOX" href="/notes/">Check It Out</a>
+      <a class="LINKBOX" href="/notes/">| ACCESS NOTES</a>
     </div>
     </div>
 
@@ -127,24 +134,25 @@ import Footer from '../components/Footer.astro';
   text-align: center;
   text-decoration: none;
   border-style: solid;
-  color: #ffffff;
-  background-color: rgba(135, 151, 153, 0.993); /* Button background color */
-  border-color: #d3d3d3;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.096); /* Button background color */
+  border-color: #000000;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for hover effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 4px 4px 0px rgb(0, 0, 0); /* Subtle shadow */
 }
 
 /* Glow effect on hover */
 .LINKBOX:hover {
- 
-  animation: welcomepulse 5.5s infinite ease-in-out;
-  border-radius: 12px 80px 12px 80px  /40px 20px 40px 20px ;
+  box-shadow: 0px 0px 0px rgb(0, 0, 0);
+  background-color: rgba(197, 197, 197, 0.096); /* Button background color */
+  padding-left: 2.5%;
+  border-radius: 0px;
   font-weight: 350;
   
   
-  transform: scale(1.15); /* Slight zoom-in effect */
+  transform: scale(1.1); /* Slight zoom-in effect */
 
   
 }
@@ -228,6 +236,7 @@ import Footer from '../components/Footer.astro';
   width: 100%; /* Make the image responsive */
   max-width: 100%;
   height: auto;
+  min-height: 50%;
   border-radius: 20px; /* Optional: rounded corners for the image */
   transition: border-radius 0.3s ease,box-shadow 0.3s ease;
 }

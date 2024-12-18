@@ -1,9 +1,9 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '| embedded systems'
-pubDate: 2023-11-13
+pubDate: '2023-11-13'
 description: 'embedded systems notes'
-preview: "Lorem ipsum"
+preview: "- To Represent fractional values, the weight of the values to the right of the binary point can be used, where the bit position is negativ"
 author: 'Astro Learner'
 image:
     url: 'https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg'

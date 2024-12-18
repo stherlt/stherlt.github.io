@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: '| circuits'
+title: '| electronic devices'
 pubDate: 2023-11-13
 description: 'notes on circuits'
 preview: "Lorem ipsum"

@@ -162,9 +162,8 @@ html {
     display: flex;
     margin-bottom: 3%;
     
-    margin-left: 5%;
-    margin-right: 10%;
-    width: 80%;
+    
+    
     padding-right: 00%;
     color: #000000;
     border-width: 3px;
@@ -224,22 +223,23 @@ html {
 
 .index-links a {
     background-color: #00000000;
-    
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Initial glow */
     display: inline-block; /* Allow padding and border */
     padding: 10px; /* Space around icons */
-    border: 2px solid transparent; /* Initial border */
-    border-radius: 30px; /* Rounded corners */
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    
+    border-radius: 0px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition */
 }
 
 .index-links a:hover {
   perspective: 1000px;
-  border-style: solid;
-  border-color: #0000003d;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7); /* Initial glow */
+  border-radius: 4px;
+  box-shadow: 0px 3px 0px rgba(0, 0, 0, 0); /* Initial glow */
+  
+  
+  
   transform: scale(1.1); /* 3D rotation up and slight zoom */
-  transition: transform 0.5s ease, box-shadow 0.3s ease; /* Smooth transition */
-  animation: glowPulse 8s infinite ease-in-out; /* Pulse glow animation */
+ 
   
 }
 
@@ -248,7 +248,6 @@ html {
   0% {
     box-shadow: inset 5px 0px 15px rgba(0, 0, 0, 0.541); /* Right */
   }
-
   25% {
     box-shadow: inset 0px 4.5px 15px rgba(0, 0, 0, 0.459); /* Bottom */
   }
