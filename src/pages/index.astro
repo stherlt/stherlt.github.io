@@ -25,7 +25,7 @@ import Footer from '../components/Footer.astro';
 	
 
  
-  <section class="s0 hidden">
+  
     
   </section>
   <section class="s1 hidden">
@@ -119,7 +119,7 @@ import Footer from '../components/Footer.astro';
   text-decoration: none;
   border-style: solid;
   color: #ffffff;
-  background-color: rgba(135, 151, 153, 0.993); /* Button background color */
+  font-weight: 600;
   border-color: #d3d3d3;
   border-radius: 10px;
   cursor: pointer;
@@ -129,13 +129,13 @@ import Footer from '../components/Footer.astro';
 
 /* Glow effect on hover */
 .LINKBOX:hover {
- 
+  font-weight: 900;
   animation: welcomepulse 5.5s infinite ease-in-out;
-  border-radius: 12px 80px 12px 80px  /40px 20px 40px 20px ;
+  color: white;
   font-weight: 350;
   
   
-  transform: scale(1.15); /* Slight zoom-in effect */
+  transform: scale(1.1); /* Slight zoom-in effect */
 
   
 }
@@ -158,19 +158,25 @@ import Footer from '../components/Footer.astro';
 @keyframes welcomepulse {
   0% {
     
-    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Right */
+    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Right */
   }
-  25% {
-    box-shadow:inset 0px 10px 15px rgba(82, 82, 82, 0.6); /* Bottom */
+  20% {
+    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Bottom */
   }
-  50% {
-    box-shadow:inset -10px 0px 15px rgba(82, 82, 82, 0.6); /* Left */
+  21% {
+    box-shadow:inset 00px 0px 0px rgba(255, 0, 119, 0.993); /* Bottom */
   }
-  75% {
-    box-shadow:inset 0px -10px 15px rgba(82, 82, 82, 0.6); /* Top */
+  40% {
+    box-shadow:inset 75px 0px 0px rgba(255, 0, 119, 0.993); /* Left */
+  }
+  60% {
+    box-shadow:inset 200px 0px 0px rgba(255, 0, 119, 0.993); /* Top */
+  }
+  80% {
+    box-shadow:inset 75px 0px 0px rgba(255, 0, 119, 0.993); /* Top */
   }
   100% {
-    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Back to Right */
+    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Back to Right */
   }
 }
 @keyframes wiggle {
@@ -209,7 +215,7 @@ import Footer from '../components/Footer.astro';
 }
 .image-container:hover {
   border-radius: 0px;
-  transform: scale(1.01);
+  transform: scale(1.00);
   
   
 }
@@ -253,7 +259,7 @@ import Footer from '../components/Footer.astro';
 }
 .vertical-divider {
   width: 2px; /* Make the line thin */
-  background-color: #000000; /* Black color for the line */
+  background-color: #ffffff; /* Black color for the line */
   height: 500px; /* Make it stretch the full height of the section */
   margin: 0 20px; /* Add some spacing on either side of the line */
 }
@@ -278,26 +284,26 @@ import Footer from '../components/Footer.astro';
   }
   .content-section {
     transform: translateY(-10%);
-    background-color: #00000007;
+    
     padding: 5%;
     width: 100%;
     flex-direction: column;
     align-items: center;
-    border-radius: 10px;
+
     border-style: solid;
-    border-color: #e9e9e9;
+    border-color: #e9e9e900;
     
   }
   .content-section2 {
     transform: translateY(-20%);
-    background-color: #00000007;
-    padding: 5%;
+    background-color: #00000000;
+    padding: 0%;
     width: 100%;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
     border-style: solid;
-    border-color: #e9e9e9;
+    border-color: #e9e9e900;
     
   }
 

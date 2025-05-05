@@ -11,7 +11,7 @@ body {
 
 /* Navigation Bar */
 .navigation {
-  background-color: rgba(83, 83, 83, 0.05);
+  background-color: rgba(83, 83, 83, 0.295);
   backdrop-filter: blur(10px);
   display: flex; 
   align-items: center;
@@ -26,7 +26,7 @@ body {
 .left-nav a {
   font-weight: bold;
   text-decoration: none;
-  color: #000;
+  color: #ffffff;
   transition: transform 0.3s ease;
 }
 
@@ -39,16 +39,20 @@ body {
 .right-nav a {
   font-weight: 350;
   text-decoration: none;
-  color: #000;
+  color: #f3f3f3;
   padding: 10px;
   transition: transform 0.3s ease;
+}
+.node{
+  filter: invert();
+  color: black;
 }
 .node:hover {
   transform: scale(1.4);
 }
 .navigation:hover {
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.123);
-  background-color: rgba(39, 39, 39, 0.062);
+  background-color: rgba(39, 39, 39, 0.842);
 
 }
 
@@ -65,7 +69,7 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: #000;
+  color: #ffffff;
 }
 
 /* Mobile Menu Hidden */
@@ -76,7 +80,7 @@ body {
 .right-nav.mobile-hidden {
   display: none;
   flex-direction: column;
-  background-color: rgba(83, 83, 83, 0.1);
+  background-color: rgba(83, 83, 83, 0.425);
   position: absolute;
   top: 100%;
   right: 10px;
