@@ -28,7 +28,7 @@ import Footer from '../components/Footer.astro';
   
     
   </section>
-  <section class="s1 hidden">
+  <section class="s1">
 
    
 <section class="nameblk">
@@ -38,70 +38,86 @@ import Footer from '../components/Footer.astro';
     <h2 class="skinny">| ELECTRICAL ENGINEERING STUDENT</h2>
     <p> </p>
     <div class="index-links">
-      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/seantheriault/" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
       </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/stars/stherlt/lists/projects" target="_blank" rel="noopener noreferrer">
           <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle;">
       </a>
       <a href="https://github.com" target="_blank" rel="noopener noreferrer">
         <img src="https://cdn-icons-png.flaticon.com/128/1250/1250592.png" alt="Contact" style="width: 24px; height: 24px; vertical-align: middle;">
     </a>
    </div>
-   <p class="skinny">my personal portfolio</p>
+   <p class="skinny">Personal Portfolio</p>
   
    </section>
   
   </section>
   <hr class="divider">
-  <section class="lf hidden">
+  
      
-  </section>
+  
   <div class="content-section">
     <div class="image-container">
-      <img src="/public/demo_img_1.jpeg" alt="Description" class="section-image">
+      <img src="public/demo_img_1.jpeg" alt="Description" class="section-image">
     </div>
     <div class="vertical-divider"></div>
     <div class="text-container">
       <div class="fsmall">| PROJECTS</div>
-      <p>Check out the projects I have worked on</p>
-      <a class="LINKBOX" href="/projects/">Check It Out</a>
+      <p>Check out the projects I have worked on, from embedded IR communication devices to python chatbots!</p>
+      <a class="LINKBOX" href="/projects/">| READ MORE</a>
     </div>
   </div>
   <hr class="divider">
   <div class="content-section2">
     <div class="text-container">
       <div class="fsmall">| ABOUT</div>
-      <p>Your content goes here. Add your text or description about the image or any topic you want to include in this section.</p>
+      <p>Hi I'm Sean, a third year Electrical Engineering student at the University of Alberta, with a interest in hardware, electronics, robotics, and communication systems. 
+        
+        On this site you can find:
+      </p>
+      <p>- My project portfolio</p>
+      <p>- Notes on various topics</p>
+      <p>- My visual arts gallery</p>
+      <br>
     </div>
     </div>
 
   <hr class="divider">
   <div class="content-section">
     <div class="image-container">
-      <img src="/public/demo_img_2.jpg" alt="Description" class="section-image">
+      <img src="public/demo_img_2.JPG" alt="Description" class="section-image">
     </div>
     <div class="vertical-divider"></div>
     <div class="text-container">
       <div class="fsmall">| GALLERY</div>
-      <p>Your content goes here. Add your text or description about the image or any topic you want to include in this section.</p>
-      <a class="LINKBOX" href="/gallery/">Check It Out</a>
+      <p>Visual arts gallery</p>
+      <a class="LINKBOX" href="/gallery/">| TAKE A LOOK</a>
     </div>
   </div>
   <hr class="divider">
   <div class="content-section2">
     <div class="text-container">
-      <div class="fsmall">| ABOUT</div>
-      <p>Your content goes here. Add your text or description about the image or any topic you want to include in this section.</p>
+      <div class="fsmall">| NOTES</div>
+      <p>Collection of notes on various topics</p>
+      <a class="LINKBOX" href="/notes/">| ACCESS NOTES</a>
     </div>
     </div>
 
-  <hr class="divider">
+  
  
 </div>
  
 
-  <Footer/>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<hr class="divider">
+<Footer/>
   
 
   </body>
@@ -124,7 +140,7 @@ import Footer from '../components/Footer.astro';
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease; /* Smooth transition for hover effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  box-shadow: 4px 4px 0px rgb(0, 0, 0); /* Subtle shadow */
 }
 
 /* Glow effect on hover */
@@ -204,6 +220,7 @@ import Footer from '../components/Footer.astro';
 .content-section {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 30px;
   gap: 20px; /* Adjust the gap between the image and text */
@@ -222,8 +239,9 @@ import Footer from '../components/Footer.astro';
 
 .section-image {
   width: 100%; /* Make the image responsive */
-  max-width: 800px; /* Limit the image width */
+  max-width: 100%;
   height: auto;
+  min-height: 50%;
   border-radius: 20px; /* Optional: rounded corners for the image */
   transition: border-radius 0.3s ease,box-shadow 0.3s ease;
 }
@@ -232,6 +250,7 @@ import Footer from '../components/Footer.astro';
 }
 
 .text-container {
+  width: 100%;
   flex: 2; /* Take up more space than the image */
   padding-left: 20px; /* Add some space between the image and the text */
 }
@@ -263,6 +282,11 @@ import Footer from '../components/Footer.astro';
   height: 500px; /* Make it stretch the full height of the section */
   margin: 0 20px; /* Add some spacing on either side of the line */
 }
+html, body {
+ 
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%; /* Ensure body width matches viewport */
+}
 @media (max-width: 480px) {
   .fancy {
     font-size: 2.5rem;
@@ -273,13 +297,13 @@ import Footer from '../components/Footer.astro';
     text-align: left;
   }
   .skinny {
-    font-size: 1.3rem;
+    font-size: 4vw;
   }
   .lf{
     height: 0px;
   }
   .nameblk{
-    
+    font-size: 1rem;
    
   }
   .content-section {
@@ -308,7 +332,8 @@ import Footer from '../components/Footer.astro';
   }
 
   .section-image {
-    max-width: 100%;
+    max-width: 90%;
+    transform: translateX(5%);
     
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
@@ -325,10 +350,15 @@ import Footer from '../components/Footer.astro';
 
   .LINKBOX {
     font-size: 0.9rem;
-    padding: 8px 15px;
+    padding: 5px 10px;
+    width: auto;
+  }
+  body {
+    font-size: 14px; /* Scale down font sizes */
   }
   .vertical-divider{
     height: 00px;
+    width: 0px;
   }
 }
 

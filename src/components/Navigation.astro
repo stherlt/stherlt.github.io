@@ -59,7 +59,7 @@
     filter: invert();
     width: 40px;
     height: 40px;
-    margin: 0 20px;
+    margin: 0 1%;
     transition: transform 0.5s ease, opacity 0.3s ease;
   }
   
@@ -189,6 +189,16 @@
     .hamburger-menu {
       display: none !important;
     }
+    .favicon{
+      transform: translateX(-50%);
+    }
+  }
+  .title {
+    font-family: "Lexend Deca", sans-serif;
+
+    margin: -2rem 0;
+    font-size: 6.5rem;
+    font-weight: 700;
   }
   </style>
   
@@ -199,7 +209,7 @@
   
   <nav class="navigation">
     <div class="left-nav">
-      <img src="/public/initials.png" alt="Logo" class="favicon">
+      <img src="public/initials.png" alt="Logo" class="favicon">
       <a href="/">| HOME</a>
       <a href="/about/">| ABOUT</a>
     </div>
@@ -211,7 +221,7 @@
   </nav>
   
   <div class="mobile-menu">
-    <h1>NAV</h1>
+    <p class="title">NAV</p>
     <a href="/">| HOME</a>
     <a href="/about/">| ABOUT</a>
     <a href="/gallery/">| GALLERY</a>

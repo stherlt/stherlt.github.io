@@ -14,7 +14,7 @@ import Footer from '../components/Footer.astro';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="/path/to/styles.css" />
     <title>| ABOUT</title> <!Tab title>
     <script defer src="/src/app/appscroll.js"></script>
     <Navigation/>
@@ -27,23 +27,24 @@ import Footer from '../components/Footer.astro';
 
 </section>
 <section class="s3 hidden"> 
-  <h1 class="fsmall"> EXTRACURRICULARS </h1>
+  <h1 class="fsmall">| STUFF </h1>
   <p class="skinny"> I have worked on mutiple projects in my free time which are relevant to my 
     </p>
   
 </section>
-
-<section class="s3 hidden"> 
-  <h1 class="fsmall"> HOBBIES</h1>
-  <p class="skinny"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu ullamcorper diam. Maecenas sit amet tempor ex. Aliquam quis augue sed magna cursus malesuada. Praesent placerat consectetur commodo. Ut sed mauris euismod mauris ornare consequat.</p>
-  
-</section>
-
 <section class="s3 hidden"> 
   <h1 class="fsmall">| NOTES</h1>
   <p class="skinny"> Access my online notes!</p>
   <a class="LINKBOX"href="/notes/">Check It Out</a>
 </section>
+
+<section class="s3 hidden"> 
+  <h1 class="fsmall">| STUFF2</h1>
+  <p class="skinny"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eu ullamcorper diam. Maecenas sit amet tempor ex. Aliquam quis augue sed magna cursus malesuada. Praesent placerat consectetur commodo. Ut sed mauris euismod mauris ornare consequat.</p>
+  
+</section>
+
+
 <hr class="divider">
   <Footer/>
   </body>
@@ -177,7 +178,7 @@ import Footer from '../components/Footer.astro';
   }
   .s3:hover{
     
-    box-shadow: 50px -0px 90px rgba(63, 63, 63, 0.103); 
+    
     transform: translateX(1%);
   }
 
