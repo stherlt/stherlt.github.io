@@ -6,74 +6,84 @@
   }
   
   .navigation {
-    backdrop-filter: blur(10px);
+    width: 100%;
+    
+    padding-bottom: 2%;
+  z-index: 999;
+    backdrop-filter: blur(30px);
     padding: 10px;
     font-weight: bold;
     text-align: center;
     justify-content: space-between;
     display: flex;
     border-radius: 10px;
-    margin-top: 1%;
+   
     margin-bottom: 1%;
+    
     z-index: 1000;
   }
   
   .left-nav,
   .right-nav {
     
-    display: flex;
   }
-  
+  .navigation:hover{
+    backdrop-filter: blur(90px);
+  }
   .right-nav {
     margin-left: auto;
+    
   }
   
   .navigation a {
-    color: #ffffff;
+    color: #ffecd7;
     width: 120px;
     margin-left: 15px;
     font-family: "Lexend Deca", sans-serif;
     font-weight: 350;
     text-decoration: none;
     padding: 5px 10px;
-    border-style: dotted;
-    border-color: #00000000;
-    border-radius: 90px 20px 60px 90px / 50px 20px 38px 20px;
+    
+   
+    
     display: inline-block;
+    text-decoration: none;
+    position: relative;
     transition: transform 0.1s ease, text-shadow 0.3s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.3s ease;
   }
   
+ 
+
+.navigation a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  transition: all 0.2s;
+}
+
+.navigation a:hover::before {
+  transform: translateX(-50%) scaleY(1);
+}
   .navigation a:hover {
-    transform: scale(1.2);
-    color: white;
-    box-shadow: inset 40px -30px 0px rgba(255, 0, 119, 0.993);
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(0, 0, 0, 0.6);
+    
+    color: #dfcdba;
+   
+    
   }
   
   .navigation a:active {
-    box-shadow: inset 40px -90px 0px rgba(255, 174, 0, 0.993);
+    
     transform: scale(1.2);
   }
   
-  .favicon {
-    filter: invert();
-    width: 40px;
-    height: 40px;
-    margin: 0 1%;
-    transition: transform 0.5s ease, opacity 0.3s ease;
-  }
+ 
   
-  .favicon:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-  
-  .dividerN {
-    border: none;
-    border-top: 2px solid #ffffff;
-    margin: 20px 20px;
-    width: 100%;
-  }
+
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -91,7 +101,7 @@
     }
   
     .hamburger-menu .menu-icon {
-      
+       transform: translateX(-100%);
       border-radius: 50px;
       cursor: pointer;
       font-size: 1.5rem;
@@ -100,7 +110,7 @@
       transition: all 0.3s ease;
     }
     .hamburger-menu .menu-icon:hover {
-      transform: rotate(90deg);
+      
       
     }
     .hamburger-menu .menu-icon:active {
@@ -130,7 +140,7 @@
 
 .mobile-menu a {
   margin: 10px 0;
- 
+
   font-size: 2.5rem;
   transition: all 0.3s ease;
   color: white;
@@ -160,6 +170,11 @@
   100%{
     font-size: 2.5rem;
   }
+  
+}
+.button{
+  border-style:solid ;
+  border-radius: 10px;
 }
 @keyframes slideout {
   0% {
@@ -200,32 +215,43 @@
     font-size: 6.5rem;
     font-weight: 700;
   }
+
+  
+
   </style>
   
   <div class="hamburger-menu">
-    <img src="/public/initials.png" alt="Logo" class="favicon">
-    <span class="menu-icon">▶</span>
+    <!-- <img src="/public/initials.png" alt="Logo" class="favicon"> -->
+    <span class="menu-icon">☰</span>
   </div>
   
   <nav class="navigation">
     <div class="left-nav">
-      <img src="public/initials.png" alt="Logo" class="favicon">
-      <a href="/">| HOME</a>
-      <a href="/about/">| ABOUT</a>
+      
+      <!-- <img src="public/initials.png" alt="Logo" class="favicon"> -->
+      <a href="/" >Home</a>
+      <a href="/projects/">Projects</a>
+      
+      
+      
+      
     </div>
     <div class="right-nav">
-      <a href="/gallery/">| GALLERY</a>
-      <a href="/projects/">| PROJECTS</a>
+      Sean Theriault
+      <a class="button" href="https://drive.google.com/file/d/1xHk9Y5KtXoAubaG4-8eXtXmxXOlKifV6/view?usp=sharing" target="_blank" >
+        Resume
+      </a>
+      
     </div>
-    <hr class="dividerN">
+    
+   
   </nav>
   
   <div class="mobile-menu">
     <p class="title">NAV</p>
     <a href="/">| HOME</a>
-    <a href="/about/">| ABOUT</a>
-    <a href="/gallery/">| GALLERY</a>
     <a href="/projects/">| PROJECTS</a>
+    <a href="https://drive.google.com/file/d/1xHk9Y5KtXoAubaG4-8eXtXmxXOlKifV6/view?usp=sharing">| RESUME</a>
 
   </div>
   

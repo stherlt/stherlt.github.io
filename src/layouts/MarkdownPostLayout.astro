@@ -18,6 +18,7 @@ const { frontmatter } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -43,9 +44,9 @@ const { frontmatter } = Astro.props;
   </head>
   <body class="animatein">
 <Navigation/>
-<p class="fancy">{frontmatter.title}</p>
-<p>{frontmatter.description}</p>
-<hr class="divider">
+<p class="fancy ibm-plex-sans-condensed-thin">{frontmatter.title}</p>
+<p class = "highlight">{frontmatter.description}</p>
+
 
 </section>
 
@@ -63,178 +64,92 @@ const { frontmatter } = Astro.props;
 </html>
 
 <style>
+  .ibm-plex-sans-condensed-thin {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
 .content-section {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 300;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.127); /* Subtle shadow */
   padding-top: 3%;
   padding-bottom: 3%;
+  margin-left: 10%;
   color: rgb(0, 0, 0);
   border-radius: 20px;
-  background-color: #ececec;
+  
   margin: 0 auto; /* Center the section horizontally */
-  padding-left: 15%; 
-  padding-right: 15%; /* Optional: Add some padding inside the section */
+  padding-left: 30%; 
+  padding-right: 30%; /* Optional: Add some padding inside the section */
   box-sizing: border-box; /* Ensure padding doesn't affect the width */
   max-width: 100%;
-}
 
-
-
-
-.indexrighttext{
-  text-align: center;
+  padding: 3%;
   
-  
-  transform: translateY(10px);
-  background-color: 	#e8dcaf;
-  border-width: 1.5px;
-  
-  width: 30%;
-  margin-right: auto;
-  margin-left: 0;
-  border-radius: 4px;
-  padding: 1%;
-  animation: wiggle 2.5s infinite ease-in-out;
-}
-@keyframes welcomepulse {
-  0% {
-    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Right */
-  }
-  25% {
-    box-shadow: 0px 10px 15px rgba(255, 255, 255, 0.6); /* Bottom */
-  }
-  50% {
-    box-shadow: -10px 0px 15px rgba(255, 255, 255, 0.6); /* Left */
-  }
-  75% {
-    box-shadow: 0px -10px 15px rgba(255, 255, 255, 0.6); /* Top */
-  }
-  100% {
-    box-shadow: 10px 0px 15px rgba(255, 255, 255, 0.6); /* Back to Right */
-  }
-}
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  
-  100% { transform: rotate(0deg); }
-
+    width: 80%;
+    color: white;
+    border: dashed;
+    border-color: rgba(136, 102, 102, 0.034);
+    
+    box-shadow:  0px 0px 60px rgba(0, 0, 0, 0.35);
+    
 }
 
-.BACKGROUNDTEXT{
-  
-
-  position: absolute;
-  color: transparent;
-  color: rgb(0, 0, 0);
-  z-index: -1;
-  font-size: 300%;
-  padding-left: 60%;
-  transform: translateY(-250px);
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
-  font-style: normal;
-}
-.BACKGROUNDTEXTABT{
-  
-
-  position: absolute;
-  color: transparent;
-  color: rgb(0, 0, 0);
-  z-index: -1;
-  font-size: 100%;
-
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
-  font-style: normal;
-}
-.LINKBOX {
-  font-family: "Lexend Deca", serif;
-  font-optical-sizing: auto;
-  font-weight: 350;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border-style: solid;
-  color:rgb(0, 0, 0);
-  background-color: rgba(0, 0, 0, 0.034); /* Button background color */
-  border-color: #000000;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.5s ease, border-style 0.3s ease-in; /* Smooth transition for hover effect */
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26); /* Subtle shadow */
-}
-
-/* Glow effect on hover */
-.LINKBOX:hover {
+.highlight {
  
-
-  border-style: dotted;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.377); /* Subtle shadow */
-  font-weight: 350;
-
-  background-color: rgba(135, 151, 153, 0);
-  transform: scale(1.05); /* Slight zoom-in effect */
-
   
-}
-@keyframes welcomepulse {
-  0% {
-    
-    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Right */
-  }
-  25% {
-    box-shadow:inset 0px 10px 15px rgba(82, 82, 82, 0.6); /* Bottom */
-  }
-  50% {
-    box-shadow:inset -10px 0px 15px rgba(82, 82, 82, 0.6); /* Left */
-  }
-  75% {
-    box-shadow:inset 0px -10px 15px rgba(82, 82, 82, 0.6); /* Top */
-  }
-  100% {
-    box-shadow:inset 10px 0px 15px rgba(82, 82, 82, 0.6); /* Back to Right */
-  }}
-  .s4 img {
-    margin-left: 10%;
-    
-    
-    transition: box-shadow 0.3s ease, border-radius 0.3s ease;
-    width: 550px; /* Adjust the image width as needed */
-    height: auto; /* Maintain the aspect ratio of the image */
-}
-.s4 img:hover {
-  box-shadow:  10px 10px 0px rgba(135, 151, 153, 0.993);
+
+  color: #f5e2c9;
+ 
+  margin-left: 10%;
   
-  border-radius: 10px; /* Optional: rounded corners for the image */
+  margin: 0 auto; /* Center the section horizontally */
+  padding-left: 30%; 
+  padding-right: 30%; /* Optional: Add some padding inside the section */
+  box-sizing: border-box; /* Ensure padding doesn't affect the width */
+  max-width: 100%;
+
+  padding: 3%;
+    width: 80%;
+ 
+    
 }
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2rem; /* Set to your desired size */
-  line-height: 1.5; /* Optional: Adjust line height for better readability */
+
+.subtle {
+  color: #f5c9cb; /* Light gray or a neutral tone for balance */
 }
+
+
+
+
+
+
 .fancy {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
+  text-align: center;
+  font-weight: 400;
   font-style: normal;
   margin: 1rem 0;
-  font-size: 6.5rem;
+  font-size: 5.5rem;
  
 }
 
 @media (max-width: 480px) {
   .content-section {
-    padding: 2%;
+    padding: 3%;
+    
     margin: 0 5%;
-    font-size: 0.4rem;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 15px;
     width: 100%;
     transform: translateX(-5%);
     border-style: solid;
     border-width: 2px;
-    border-color: #0000001a;
+    background-color: #00000000;
+    border-color: #00000000;
+  }
+  .highlight{
+    font-size: 0rem;
   }
 
   .img {

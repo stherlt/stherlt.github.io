@@ -1,365 +1,452 @@
-
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+const allPosts = await Astro.glob('../pages/projects/*.md');
 ---
 
 <html lang="en">
- 
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/path/to/styles.css" />
-    <title>STHERLT | HOME</title> <!Tab title>
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Rubik+Mono+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Home</title> {/* Tab title */}
     <script defer src="/src/app/appscroll.js"></script>
-    <Navigation/>
+
+    
+
   </head>
   <body class="animatein">
-
-	
-
- 
-  
+    <Navigation />
+    <div class="colored-background">
+    <div class="header-section">
+      <div class="header-text">
+        <h1 class="fancy ibm-plex-sans-condensed-thin">SEAN THERIAULT</h1>
+        <h2 class="skills-title">ELECTRICAL ENGINEERING STUDENT</h2>
+        <div class="index-links">
+          <a href="https://www.linkedin.com/in/seantheriault/" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn" class="icon-link">
+          </a>
+          <a href="https://github.com/stars/stherlt/lists/projects" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon-link">
+          </a>
+          <a href="mailto:satheria@ualberta.ca" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.flaticon.com/128/1250/1250592.png" alt="Contact" class="icon-link">
+          </a>
+        </div>
+      </div>
     
-  </section>
-  <section class="s1">
-
-   
-<section class="nameblk">
-
-    <h1 class="fancy">SEAN THERIAULT</h1>
-
-    <h2 class="skinny">| ELECTRICAL ENGINEERING STUDENT</h2>
-    <p> </p>
-    <div class="index-links">
-      <a href="https://www.linkedin.com/in/seantheriault/" target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn" style="width: 24px; height: 24px; vertical-align: middle;">
-      </a>
-      <a href="https://github.com/stars/stherlt/lists/projects" target="_blank" rel="noopener noreferrer">
-          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 24px; height: 24px; vertical-align: middle;">
-      </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn-icons-png.flaticon.com/128/1250/1250592.png" alt="Contact" style="width: 24px; height: 24px; vertical-align: middle;">
-    </a>
-   </div>
-   <p class="skinny">Personal Portfolio</p>
-  
-   </section>
-  
-  </section>
-  <hr class="divider">
-  
-     
-  
-  <div class="content-section">
-    <div class="image-container">
-      <img src="public/demo_img_1.jpeg" alt="Description" class="section-image">
-    </div>
-    <div class="vertical-divider"></div>
-    <div class="text-container">
-      <div class="fsmall">| PROJECTS</div>
-      <p>Check out the projects I have worked on, from embedded IR communication devices to python chatbots!</p>
-      <a class="LINKBOX" href="/projects/">| READ MORE</a>
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEXuMhPWWuPTg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1707615871647?e=1756339200&v=beta&t=S6Qduz5nhUiQXw6riG6E31oU9GyjzCtQG5XmtrNmAnk" alt="Profile Picture" class="profile-pic">
     </div>
   </div>
-  <hr class="divider">
-  <div class="content-section2">
-    <div class="text-container">
-      <div class="fsmall">| ABOUT</div>
-      <p>Hi I'm Sean, a third year Electrical Engineering student at the University of Alberta, with a interest in hardware, electronics, robotics, and communication systems. 
-        
+    </section>
+
+    <div class="index">
+    <div class="skills-container">
+      <h2 class="skills-title">ABOUT</h2>
+    
+      <div class="skill-card">
+        <h3 class="skill-heading">Hi I'm Sean,</h3>
+        Im a third year Electrical Engineering student at the University of Alberta, with a interest in hardware, electronics, robotics, and communication systems. 
+            
         On this site you can find:
-      </p>
-      <p>- My project portfolio</p>
-      <p>- Notes on various topics</p>
-      <p>- My visual arts gallery</p>
-      <br>
-    </div>
-    </div>
-
-  <hr class="divider">
-  <div class="content-section">
-    <div class="image-container">
-      <img src="public/demo_img_2.JPG" alt="Description" class="section-image">
-    </div>
-    <div class="vertical-divider"></div>
-    <div class="text-container">
-      <div class="fsmall">| GALLERY</div>
-      <p>Visual arts gallery</p>
-      <a class="LINKBOX" href="/gallery/">| TAKE A LOOK</a>
-    </div>
-  </div>
-  <hr class="divider">
-  <div class="content-section2">
-    <div class="text-container">
-      <div class="fsmall">| NOTES</div>
-      <p>Collection of notes on various topics</p>
-      <a class="LINKBOX" href="/notes/">| ACCESS NOTES</a>
-    </div>
+        <p class="subtle">- My project portfolio</p>
+          <p class="subtle">- Notes on various topics</p>
+          <p class="subtle">- My visual arts gallery</p>
+        <ul class="skill-badges">
+         
+      
+        </ul>
+      </div>
     </div>
 
-  
- 
-</div>
- 
+      <div class="skills-container">
+        <h2 class="skills-title">PROJECTS</h2>
+      
+        <section class="projects-grid">
+          {allPosts.slice(0, 2).map((post) => (
+            <article class="project-card" key={post.url}>
+              <img
+                src={post.frontmatter.image.url}
+                alt={post.frontmatter.title}
+                class="project-image"
+              />
+              <h3 class="project-title">{post.frontmatter.title}</h3>
+              <p class="project-description">{post.frontmatter.description}</p>
+              <a href={post.url} class="project-link">Read More →</a>
+            </article>
+          ))}
+        </section>
+       
+        </div>
+      
 
-<br>
-<br>
 
-<br>
-<br>
-<br>
 
-<hr class="divider">
-<Footer/>
-  
 
+    <div class="skills-container">
+      <h2 class="skills-title">EDUCATION</h2>
+    
+      <div class="skill-card">
+        <h3 class="skill-heading">University of Alberta</h3>
+        <ul class="skill-badges">
+         
+      <div class="education-entry">
+       
+        <p><strong>Degree:</strong> <span class="subtle">Bachelor of Science in Electrical Engineering</span></p>
+        <p><strong>Expected Graduation:</strong> <span class="subtle">April 2027</span></p>
+        <p><strong>Relevant Achievements:</strong> <span class="highlight">Dean's List (2023–2024)</span>, <span class="subtle">Academic Scholarship Recipient</span></p>
+        
+      </div>
+        </ul>
+      </div>
+    </div>
+    
+      
+      
+    
+    <!-- Skills Section -->
+    <div class="skills-container">
+      <h2 class="skills-title">SKILLS</h2>
+    
+      <div class="skill-card">
+        <h3 class="skill-heading">Programming Languages</h3>
+        <ul class="skill-badges">
+          <li>C/C++</li>
+          <li>Python</li>
+          <li>Verilog</li>
+          <li>MATLAB</li>
+          <li>ARM Assembly</li>
+          <li>VBA</li>
+        </ul>
+      </div>
+    
+      <div class="skill-card">
+        <h3 class="skill-heading">Design and CAD</h3>
+        <ul class="skill-badges">
+          <li>AutoCAD</li>
+          <li>MicroStation</li>
+          <li>Altium</li>
+          <li>KiCAD</li>
+          <li>Solidworks</li>
+        </ul>
+      </div>
+    
+      <div class="skill-card">
+        <h3 class="skill-heading">Embedded</h3>
+        <ul class="skill-badges">
+          <li>AVR (ATMega and ATTiny)</li>
+          <li>STM32</li>
+          <li>Arduino</li>
+          <li>Teensy 4.0</li>
+          <li>ESP32</li>
+          <li>CAN, I2C, UART, SPI Protocols</li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    
+    <Footer />
   </body>
 </html>
 
 <style>
-.LINKBOX {
-  font-family: "Lexend Deca", serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  border-style: solid;
-  color: #ffffff;
-  font-weight: 600;
-  border-color: #d3d3d3;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease; /* Smooth transition for hover effect */
-  box-shadow: 4px 4px 0px rgb(0, 0, 0); /* Subtle shadow */
+  .index{
+    background-image: linear-gradient(to bottom right, #25252500, #463e3356,  #6e55558f) ;
+    width: 140%;
+  transform: translateX(-15%);
+  margin: 0;
+  padding: 0;
+  }
+ .colored-background {
+  border-radius: 15px;
+   /* Replace with your actual image path */
+  background-size: cover;     /* Scale the image to cover the div */
+  background-position: center; /* Center the image */
+  width: 140%;
+  transform: translateX(-15%);
+  margin: 0;
+  padding: 0;
+} 
+.index-links {
+  display: flex;                /* enables flexbox layout */
+  justify-content: center;     /* centers items horizontally */
+  align-items: center;         /* centers items vertically */
+  text-align: center;          /* centers inline text if needed */
+}
+body {
+  overflow-x: hidden;
 }
 
-/* Glow effect on hover */
-.LINKBOX:hover {
-  font-weight: 900;
-  animation: welcomepulse 5.5s infinite ease-in-out;
-  color: white;
-  font-weight: 350;
-  
-  
-  transform: scale(1.1); /* Slight zoom-in effect */
-
-  
+  .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.indexrighttext{
-  text-align: right;
-  
-  
-  transform: translateY(10px);
-  background-color: 	#ce535300;
-  border-width: 1.5px;
-  
-  width: 80%;
-  margin-right: auto;
-  margin-left: 0;
-  border-radius: 4px;
-  padding: 1%;
-  animation: wiggle 2.5s infinite ease-in-out;
-}
-@keyframes welcomepulse {
-  0% {
-    
-    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Right */
-  }
-  20% {
-    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Bottom */
-  }
-  21% {
-    box-shadow:inset 00px 0px 0px rgba(255, 0, 119, 0.993); /* Bottom */
-  }
-  40% {
-    box-shadow:inset 75px 0px 0px rgba(255, 0, 119, 0.993); /* Left */
-  }
-  60% {
-    box-shadow:inset 200px 0px 0px rgba(255, 0, 119, 0.993); /* Top */
-  }
-  80% {
-    box-shadow:inset 75px 0px 0px rgba(255, 0, 119, 0.993); /* Top */
-  }
-  100% {
-    box-shadow:inset 0px 0px 0px rgba(255, 0, 119, 0.993); /* Back to Right */
-  }
-}
-@keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  
-  100% { transform: rotate(0deg); }
-
-}
-
-.BACKGROUNDTEXT{
-  
-
-  position: absolute;
-  color: transparent;
-  color: rgb(255, 255, 255);
-  z-index: -1;
-  font-size: 300%;
-  padding-left: 60%;
-  transform: translateY(-250px);
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
+.ibm-plex-sans-condensed-thin {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 100;
   font-style: normal;
 }
-.content-section {
+.project-card {
+  background-color: #1f1f1f;
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 .2rem #ffffff42,
+            0 0 .2rem #ffffffa1,
+            0 0 1rem #c95c133f,
+            0 0 0.8rem #c95c133f,
+            0 0 2.8rem #c95c133f,
+            inset 0 0 1.3rem #c95c133f; 
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 3rem;
+  color: #ffecd7;
+  margin: 0.5rem 0;
+}
+
+.project-description {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-height: 4.5em;      /* limits height to about 3 lines (1.5em per line) */
+  overflow: hidden;       /* hides overflow text */
+  text-overflow: ellipsis; /* adds “...” at the end if clipped */
+  display: -webkit-box;   /* needed for multiline truncation */
+  -webkit-line-clamp: 3;  /* number of lines to show */
+  -webkit-box-orient: vertical; 
+}
+.fancy{
+text-align: center;
+}
+.project-link {
+  color: #ffba79;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.project-link:hover {
+  border-color: #ffba79;
+}
+.skinny {
+  margin-top: -2rem; /* Pull it up closer to .fancy */
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #444;
+}
+/* Container styling */
+.grey {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(135, 135, 135, 0.151) 100%); /* light grey background */
+  border-radius: 20px;
+  padding: 4rem 1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 30px;
-  gap: 20px; /* Adjust the gap between the image and text */
 }
 
-.image-container {
-  flex: 2; /* Take up equal space */
-  transition: transform 0.1s ease, text-shadow 0.3s ease, background-color 0.1s ease,color 0.1s ease, box-shadow 0.3s ease;
-}
-.image-container:hover {
-  border-radius: 0px;
-  transform: scale(1.00);
-  
-  
-}
-
-.section-image {
-  width: 100%; /* Make the image responsive */
-  max-width: 100%;
-  height: auto;
-  min-height: 50%;
-  border-radius: 20px; /* Optional: rounded corners for the image */
-  transition: border-radius 0.3s ease,box-shadow 0.3s ease;
-}
-.section-image:hover {
-  border-radius: 0px; /* Optional: rounded corners for the image */
+/* Each content block acts like a card */
+.content-section,
+.content-section2 {
+  max-width: 700px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0);
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+/* Shared styling for text inside blocks */
 .text-container {
   width: 100%;
-  flex: 2; /* Take up more space than the image */
-  padding-left: 20px; /* Add some space between the image and the text */
 }
 
-/* Ensure text is legible and aligned properly */
-.text-container h3 {
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 780;
-  font-style: normal;
-  margin-bottom: 10px;
-  font-size: 3.5em;
-}
 .fsmall {
-    font-size: 4.7rem;
-    font-weight: 780;
-  }
-.text-container p {
-  width: 80%;
-  font-family: "Lexend Deca", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-  line-height: 1.6;
+  font-size: 1.8rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  letter-spacing: 1px;
 }
-.vertical-divider {
-  width: 2px; /* Make the line thin */
-  background-color: #ffffff; /* Black color for the line */
-  height: 500px; /* Make it stretch the full height of the section */
-  margin: 0 20px; /* Add some spacing on either side of the line */
+
+p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #ccc8c8;
 }
-html, body {
- 
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  width: 100%; /* Ensure body width matches viewport */
+
+.subtle {
+  color: #cebba5;
+  font-size: 0.95rem;
 }
-@media (max-width: 480px) {
-  .fancy {
-    font-size: 2.5rem;
-  }
-  .fsmall {
+
+.highlight {
+  color: #ffecd7;
+  font-weight: bold;
+}
+.skills-container {
   
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.skills-title {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 500;
+  font-style: bold;
+  font-size: 3rem;
+  color: #ffecd7;
+  margin: 0.5rem 0;
+}
+
+.skill-card {
+  background: #1f1f1f;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.skill-heading {
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-style: bold;
+  font-size: 1.5rem;
+}
+
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.skill-badges li {
+  background: #ffecd7;
+  color: #86796a;
+  padding: 0.4rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.skill-badges li:hover {
+  background: #72675b;
+}
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+        /* background added */
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  flex-wrap: nowrap;               /* prevent image from wrapping below */
+  gap: 1rem;
+}
+
+.header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.icon-link {
+  width: 24px;
+  height: 24px;
+  margin: 0 0.5rem;
+  vertical-align: middle;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+@media (max-width: 768px) {
+  .header-section {
+    flex-direction: column;       /* stack on mobile */
+    text-align: center;
+    padding: 1rem;
+  }
+  .skills-title{
     font-size: 1.5rem;
-    text-align: left;
   }
-  .skinny {
-    font-size: 4vw;
+  .ibm-plex-sans-condensed-thin{
+    font-size: 4.5rem;
   }
-  .lf{
-    height: 0px;
+  .header-section img {
+    max-width: 80%;
+    height: auto;
   }
-  .nameblk{
-    font-size: 1rem;
-   
-  }
-  .content-section {
-    transform: translateY(-10%);
-    
-    padding: 5%;
+  .profile-pic {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.index{
+    background-image: none;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-
-    border-style: solid;
-    border-color: #e9e9e900;
-    
+  transform: translateX(0%);
+  margin: 0;
+  padding: 0;
   }
-  .content-section2 {
-    transform: translateY(-20%);
-    background-color: #00000000;
-    padding: 0%;
+  .colored-background{
+     background-image: none;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: #e9e9e900;
-    
+  transform: translateX(0%);
+  margin: 0;
+  padding: 0;
   }
-
-  .section-image {
-    max-width: 90%;
-    transform: translateX(5%);
-    
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.26);
-  }
-  .divider{
-    width: 0px;
-  }
-
-  .text-container {
-    text-align: left;
-
+   .projects-grid {
+     transform: translateX(-13%);
+   }
   
-  }
-
-  .LINKBOX {
-    font-size: 0.9rem;
-    padding: 5px 10px;
-    width: auto;
-  }
-  body {
-    font-size: 14px; /* Scale down font sizes */
-  }
-  .vertical-divider{
-    height: 00px;
-    width: 0px;
-  }
 }
 
 </style>
