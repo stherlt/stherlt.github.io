@@ -197,23 +197,64 @@ body {
   font-style: normal;
 }
 .project-card {
+  position: relative;
   background-color: #1f1f1f;
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 .2rem #ffffff42,
-            0 0 .2rem #ffffffa1,
-            0 0 1rem #c95c133f,
-            0 0 0.8rem #c95c133f,
-            0 0 2.8rem #c95c133f,
-            inset 0 0 1.3rem #c95c133f; 
+/* The animated glowing snake */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 40%);
+  height: calc(100% + 40%);
+  border-radius: 15px;
+  background: conic-gradient(
+    from 80deg,
+    transparent 80deg,
+    #ffa13628 90deg,
+    transparent 180deg,
+    #c46c2462 270deg,
+    transparent 360deg
+  );
+  animation: spin 20s linear infinite;
+  z-index: 0;
+  filter: blur(200px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.project-card:hover::before {
+  
+  opacity: 1;
+}
+.project-card:hover{
+  
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3%);
+}
+.project-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .project-image {
   width: 100%;
@@ -430,8 +471,9 @@ p {
   flex-shrink: 0;
 }
 .index{
-    background-image: none;
+    background-image: linear-gradient(to bottom,  #36363600,#efc4940e,#36363600 ) ;
     width: 100%;
+    border-radius: 10px;
   transform: translateX(0%);
   margin: 0;
   padding: 0;
@@ -443,8 +485,12 @@ p {
   margin: 0;
   padding: 0;
   }
+  .project-card{
+    width: 120%;}
    .projects-grid {
-     transform: translateX(-13%);
+     display: flex;
+    flex-direction: column;
+    align-items: center;
    }
   
 }
