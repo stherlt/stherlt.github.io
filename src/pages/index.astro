@@ -479,13 +479,19 @@ p {
   flex-shrink: 0;
 }
 .index{
-    background-image: none ;
-    width: 100%;
+   width: 100%;
+    min-height: 100dvh; /* dynamic viewport height handles mobile browser bars */
+    margin: 0;
+    padding: 0;
+    transform: none;
     border-radius: 10px;
-  transform: translateX(0%);
-  margin: 0;
-  padding: 0;
+
+    background-image: linear-gradient(to bottom, #1d1d1d, #1f1e1b, #1c1c1a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
+  
   .colored-background{
      background-image: none;
     width: 100%;
@@ -494,13 +500,15 @@ p {
   padding: 0;
   }
   .project-card{
-    width: 140%;}
+    width: 120%;
+  }
    .projects-grid {
      display: flex;
     flex-direction: column;
     align-items: center;
    }
   
-}
+  
+  }
 
 </style>
