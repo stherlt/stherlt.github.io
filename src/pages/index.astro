@@ -54,13 +54,10 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
       <h2 class="skills-title">ABOUT</h2>
     
       <div class="skill-card">
-        <h3 class="skill-heading">Hi I'm Sean,</h3>
-        Im a third year Electrical Engineering student at the University of Alberta, with a interest in hardware, electronics, robotics, and communication systems. 
+        <h3 class="skill-heading">Hi I'm Sean!</h3>
+        Im a fourth year Electrical Engineering student at the University of Alberta, with a interest in robotics, hardware design, and power electronics.
             
-        On this site you can find:
-        <p class="subtle">- My project portfolio</p>
-          <p class="subtle">- Notes on various topics</p>
-          <p class="subtle">- My visual arts gallery</p>
+        
         <ul class="skill-badges">
          
       
@@ -68,27 +65,7 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
       </div>
     </div>
 
-      <div class="skills-container">
-        <h2 class="skills-title">PROJECTS</h2>
       
-        <section class="projects-grid">
-          {allPosts.slice(0, 2).map((post) => (
-            <article class="project-card" key={post.url}>
-              <img
-                src={post.frontmatter.image.url}
-                alt={post.frontmatter.title}
-                class="project-image"
-              />
-              <h3 class="project-title">{post.frontmatter.title}</h3>
-              <p class="project-description">{post.frontmatter.description}</p>
-              <a href={post.url} class="project-link">Read More →</a>
-            </article>
-          ))}
-        </section>
-       
-        </div>
-      
-
 
 
 
@@ -101,13 +78,49 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
          
       <div class="education-entry">
        
-        <p><strong>Degree:</strong> <span class="subtle">Bachelor of Science in Electrical Engineering</span></p>
-        <p><strong>Expected Graduation:</strong> <span class="subtle">April 2027</span></p>
-        <p><strong>Relevant Achievements:</strong> <span class="highlight">Jason Lang</span>, <span class="subtle">Academic Scholarship Recipient</span></p>
+        <p><strong>Bachelor of Science in Electrical Engineering | </strong><span class="subtle">Co-op Program</span></p>
+        <p><strong>Edmonton, AB | </strong> <span class="subtle">2022 - Present</span></p>
+        
         
       </div>
         </ul>
       </div>
+    </div>
+    <div class="skills-container">
+      <h2 class="skills-title">EXPERIENCE</h2>
+    <div class="skill-card">
+        <p><strong class="skill-heading">Autonomous Robotic Vehicle Project (ARVP) | </strong><span class="skill-heading subtle">Sep. 2023 - Present</span></p>
+        Electrical Co-Lead
+        <p class="subtle">- Led team of 20+ students, engaging in technical discussion, design review and mentorship for AUV firmware and
+hardware projects</p>
+        <p class="subtle">- Oversaw and contributed to the system level electrical design of a AUV, while handling procurement and
+purchasing of necessary electrical components</p>
+       
+        
+        
+        </ul>
+      </div>
+      <div class="skill-card">
+        <p><strong class="skill-heading">ATCO Electric | </strong><span class="skill-heading subtle">Jan. 2025 - Aug. 2025</span></p>
+        Renewables and Microgrids Co-op Student
+        <p class="subtle">- Drafted large scale electronic schematics for Battery Energy Storage Systems (BESS), PV Arrays, and microgrid sites using MicroStation</p>
+       <p class="subtle">- Developed data analysis tools for inverter performance on large scale solar sites and created detailed reports regarding PV array efficiency, utilizing statistical analysis methods in Excel</p> 
+        <p class="subtle">- Designed an overhaul of an off-grid generation sites metering equipment to improve the efficiency diesel and solar assets, supported procurement of construction materials and project execution</p>
+        
+        </ul>
+      </div>
+    <div class="skill-card">
+        <p><strong class="skill-heading">Primary Engineering & Construction | </strong><span class="skill-heading subtle">May. 2024 - Aug. 2024</span></p>
+        Electrical Engineering Co-op Student
+        <p class="subtle">- Utilized GIS and Electrical Line design tools to deliver cost effective and safe engineering solutions for Electrical
+Distribution projects through planning, detailed structural modeling and line loading calculations</p>
+       <p class="subtle">- Carried out the full design process for a rushed electrical service project, completed technical drawings, line
+stability simulations, and created approval packages for relevant stakeholders</p> 
+        
+        
+        </ul>
+      </div>
+ 
     </div>
     
       
@@ -115,7 +128,7 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
     
     <!-- Skills Section -->
     <div class="skills-container">
-      <h2 class="skills-title">SKILLS</h2>
+      <h2 class="skills-title">TECHNICAL SKILLS</h2>
     
       <div class="skill-card">
         <h3 class="skill-heading">Programming Languages</h3>
@@ -152,6 +165,50 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
         </ul>
       </div>
     </div>
+    <div class="skills-container">
+      <h2 class="skills-title">EXTRACURRICULARS</h2>
+    <div class="skill-card">
+        <p><strong class="skill-heading">Electrical Engineering Club | </strong><span class="skill-heading subtle">May. 2025 - Present</span></p>
+        Co-Vice President Student Life
+        <p class="subtle">- Led a team of student volunteers in order to organize social events, as well as fundraisers</p>
+        <p class="subtle">- Planned out event logistics including safety plans, and coordinated event details with relevant venues</p>
+      </div>
+      <div class="skill-card">
+        <p><strong class="skill-heading">Engineering Students Society | </strong><span class="skill-heading subtle">Sep. 2023 - May 2025</span></p>
+        Co-Director of Videography
+        <p class="subtle">- Oversaw all film related production within a major student advocacy and services club, and took lead role in the creation of promotional material for student events</p>
+      </div>
+      <div class="skill-card">
+        <p><strong class="skill-heading">Electrical Engineering Club | </strong><span class="skill-heading subtle">Jan. 2024 - May 2024</span></p>
+        Co-Vice President Communications
+        <p class="subtle">- Managed the social media portfolio and website for club which represents 300+ students</p>
+      </div>
+      
+      
+ 
+    </div>
+<div class="skills-container">
+        <h2 class="skills-title">PROJECTS</h2>
+      
+        <section class="projects-grid">
+          {allPosts.slice(0, 2).map((post) => (
+            <article class="project-card" key={post.url}>
+              <img
+                src={post.frontmatter.image.url}
+                alt={post.frontmatter.title}
+                class="project-image"
+              />
+              <h3 class="project-title">{post.frontmatter.title}</h3>
+              <p class="project-description">{post.frontmatter.description}</p>
+              <a href={post.url} class="project-link">Read More →</a>
+            </article>
+          ))}
+        </section>
+       
+        </div>
+      
+
+     
     </div>
     
     <Footer />
