@@ -74,7 +74,7 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
     
       <div class="skill-card">
         <h3 class="skill-heading">University of Alberta</h3>
-        <ul class="skill-badges">
+        
          
       <div class="education-entry">
        
@@ -189,7 +189,7 @@ stability simulations, and created approval packages for relevant stakeholders</
     </div>
 <div class="skills-container">
         <h2 class="skills-title">PROJECTS</h2>
-      
+        
         <section class="projects-grid">
           {allPosts.slice(0, 2).map((post) => (
             <article class="project-card" key={post.url}>
@@ -622,7 +622,7 @@ p {
     transform: none;
     border-radius: 10px;
 
-    background-image: linear-gradient(to bottom, #1d1d1d, #1f1e1b, #1c1c1a);
+    background-image: none;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
