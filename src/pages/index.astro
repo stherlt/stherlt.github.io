@@ -30,13 +30,16 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
         <h2 class="skills-title">ELECTRICAL ENGINEERING STUDENT</h2>
         <div class="index-links">
           <a href="https://www.linkedin.com/in/seantheriault/" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn" class="icon-link">
+            <img src="https://cdn-icons-png.flaticon.com/256/61/61109.png" alt="LinkedIn"  class="icon-link">
           </a>
           <a href="https://github.com/stars/stherlt/lists/projects" target="_blank" rel="noopener noreferrer">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="icon-link">
           </a>
           <a href="mailto:satheria@ualberta.ca" target="_blank" rel="noopener noreferrer">
-            <img src="https://cdn-icons-png.flaticon.com/128/1250/1250592.png" alt="Contact" class="icon-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Email" class="icon-link">
+          </a>
+          <a href="https://drive.google.com/file/d/1XND4uoZLJRUvB2aekekpRIHn7KCCtKaV/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+            <img src="https://cdn-icons-png.freepik.com/256/1436/1436731.png" alt="Resume" class="icon-link">
           </a>
         </div>
       </div>
@@ -179,6 +182,11 @@ const allPosts = await Astro.glob('../pages/projects/*.md');
   align-items: center;         /* centers items vertically */
   text-align: center;          /* centers inline text if needed */
 }
+.index-links a {
+  position: relative;
+}
+
+
 body {
   overflow-x: hidden;
 }
@@ -197,23 +205,64 @@ body {
   font-style: normal;
 }
 .project-card {
+  position: relative;
   background-color: #1f1f1f;
   border-radius: 15px;
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 .2rem #ffffff42,
-            0 0 .2rem #ffffffa1,
-            0 0 1rem #c95c133f,
-            0 0 0.8rem #c95c133f,
-            0 0 2.8rem #c95c133f,
-            inset 0 0 1.3rem #c95c133f; 
+/* The animated glowing snake */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 40%);
+  height: calc(100% + 40%);
+  border-radius: 15px;
+  background: conic-gradient(
+    from 80deg,
+    transparent 80deg,
+    #ffa13628 90deg,
+    transparent 180deg,
+    #c46c2462 270deg,
+    transparent 360deg
+  );
+  animation: spin 20s linear infinite;
+  z-index: 0;
+  filter: blur(200px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
+
+.project-card:hover::before {
+  
+  opacity: 1;
+}
+.project-card:hover{
+  
+  box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3%);
+}
+.project-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 .project-image {
   width: 100%;
@@ -430,12 +479,19 @@ p {
   flex-shrink: 0;
 }
 .index{
-    background-image: none;
-    width: 100%;
-  transform: translateX(0%);
-  margin: 0;
-  padding: 0;
+   width: 100%;
+    min-height: 100dvh; /* dynamic viewport height handles mobile browser bars */
+    margin: 0;
+    padding: 0;
+    transform: none;
+    border-radius: 10px;
+
+    background-image: linear-gradient(to bottom, #1d1d1d, #1f1e1b, #1c1c1a);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
+  
   .colored-background{
      background-image: none;
     width: 100%;
@@ -443,10 +499,16 @@ p {
   margin: 0;
   padding: 0;
   }
+  .project-card{
+    width: 120%;
+  }
    .projects-grid {
-     transform: translateX(-13%);
+     display: flex;
+    flex-direction: column;
+    align-items: center;
    }
   
-}
+  
+  }
 
 </style>

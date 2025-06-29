@@ -71,14 +71,17 @@
 }
   .navigation a:hover {
     
-    color: #dfcdba;
+    color: #c3b3a3;
+    transform: translateY(2%);
    
     
   }
   
   .navigation a:active {
-    
-    transform: scale(1.2);
+    border-radius: 10PX;
+    transform: translateY(10%);
+    color: #d4ac82;
+      
   }
   
  
@@ -123,9 +126,9 @@
   display: none; /* Hide by default */
   flex-direction: column;
   align-items: left;
-  
-  background-color: rgba(255, 0, 119, 0.993);
-    color: white;
+     
+  background-image: linear-gradient(#463e33) ;
+    color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
   left: 0;
@@ -140,10 +143,10 @@
 
 .mobile-menu a {
   margin: 10px 0;
-
+ font-family: "Lexend Deca", sans-serif;
   font-size: 2.5rem;
   transition: all 0.3s ease;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
 }
@@ -182,7 +185,7 @@
   
   } 
   50% {
-    background-color: rgba(255, 217, 0, 0.993);
+    background-color: #e5c9ab;
     transform: translateX(-100%);
     
   } 
@@ -217,7 +220,16 @@
   }
 
   
-
+  *{
+    color:#e5c9ab;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 5px 10px;
+    
+    
+   
+  }
   </style>
   
   <div class="hamburger-menu">
@@ -237,8 +249,8 @@
       
     </div>
     <div class="right-nav">
-      Sean Theriault
-      <a class="button" href="https://drive.google.com/file/d/1xHk9Y5KtXoAubaG4-8eXtXmxXOlKifV6/view?usp=sharing" target="_blank" >
+      | Sean Theriault
+      <a class="button" href="https://drive.google.com/file/d/1XND4uoZLJRUvB2aekekpRIHn7KCCtKaV/view?usp=sharing" target="_blank" >
         Resume
       </a>
       
@@ -249,9 +261,9 @@
   
   <div class="mobile-menu">
     <p class="title">NAV</p>
-    <a href="/">| HOME</a>
-    <a href="/projects/">| PROJECTS</a>
-    <a href="https://drive.google.com/file/d/1xHk9Y5KtXoAubaG4-8eXtXmxXOlKifV6/view?usp=sharing">| RESUME</a>
+    <a href="/">HOME</a>
+    <a href="/projects/">PROJECTS</a>
+    <a href="https://drive.google.com/file/d/1XND4uoZLJRUvB2aekekpRIHn7KCCtKaV/view?usp=sharing">RESUME</a>
 
   </div>
   
