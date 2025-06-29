@@ -244,11 +244,14 @@ body {
   
   opacity: 1;
 }
+
 .project-card:hover{
   
   box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.3);
   transform: translateY(-3%);
 }
+
+
 .project-card > * {
   position: relative;
   z-index: 2;
@@ -385,12 +388,55 @@ p {
 }
 
 .skill-card {
+  position: relative;
   background: #1f1f1f;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Glowing snake effect */
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 40%);
+  height: calc(100% + 40%);
+  border-radius: 16px;
+  background: conic-gradient(
+    from 80deg,
+    transparent 80deg,
+    #ffa13628 90deg,
+    transparent 180deg,
+    #c46c2462 270deg,
+    transparent 360deg
+  );
+  animation: spin 20s linear infinite;
+  z-index: 0;
+  filter: blur(200px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-card:hover::before {
+  opacity: 1;
+}
+
+
+
+/* Ensure the spin animation is defined */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .skill-heading {
@@ -409,6 +455,7 @@ p {
 }
 
 .skill-badges li {
+  position: relative;
   background: #ffecd7;
   color: #86796a;
   padding: 0.4rem 0.75rem;
@@ -416,11 +463,42 @@ p {
   font-size: 0.95rem;
   font-weight: 500;
   white-space: nowrap;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Glowing snake effect for badge */
+.skill-badges li::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 40%);
+  height: calc(100% + 40%);
+  border-radius: 12px;
+  background: conic-gradient(
+    from 80deg,
+    transparent 80deg,
+    #ffa13628 90deg,
+    transparent 180deg,
+    #c46c2462 270deg,
+    transparent 360deg
+  );
+  animation: spin 20s linear infinite;
+  z-index: 0;
+  filter: blur(120px); /* reduced for badge size */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.skill-badges li:hover::before {
+  opacity: 1;
 }
 
 .skill-badges li:hover {
-  background: #72675b;
+  background: #72675b71;
+  transform: translateY(-3%);
 }
 
 .header-section {
@@ -447,6 +525,7 @@ p {
   margin: 0 0.5rem;
   vertical-align: middle;
 }
+
 
 .profile-pic {
   width: 150px;
